@@ -1,0 +1,21 @@
+.footer {
+  padding: 50px 0;
+  background: #C4C4C4;
+  &__wrap {
+    align-items: center;
+  }
+  &__logo {
+    & img {
+      width: 155px;
+    }
+    @media only screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+  &__copy {
+    text-align: right;
+    @media only screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  box-shadow:  0 4px 4px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+  background-color: $colorRed;
+  text-decoration: none;
+  padding: 15px 26px;
+  outline: 0;
+  border: 1px solid transparent;
+  cursor: pointer;
+  overflow: hidden;
+  line-height: 1;
+  min-width: 250px;
+  transition: all .3s;
+  &:hover {
+    background-color: lighten($colorRed, 10%);
+    box-shadow:  none;
+  }
+  &:focus {
+    outline: 0;
+    box-shadow:  none;
+    transform: translateY(3px);
+  }
+  &:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+
+}

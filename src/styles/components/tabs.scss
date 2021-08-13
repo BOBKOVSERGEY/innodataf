@@ -1,0 +1,56 @@
+.tabs {
+  &__header {
+    margin: 15px 0;
+    & ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #F4F5F2;
+      & li
+      {
+        padding: 7px 15px;
+        line-height: 1;
+        & a {
+          font-size: 1.8rem;
+          color: $colorLightGray;
+
+          position: relative;
+          transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+          padding: 0 6px;
+          &:hover {
+            color: black;
+
+          }
+          &.active {
+            color: black;
+            &:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: -7px;
+              width: 100%;
+              height: 3px;
+              background-color: $colorRed;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  &__body>&__content {
+    display: none;
+    opacity: 0;
+    transform: scale(.9);
+    transition: opacity .5s ease-in-out 0s,
+                transform .5s ease-in-out 0s;
+  }
+  &__content.active {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
