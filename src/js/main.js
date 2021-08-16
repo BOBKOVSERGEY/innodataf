@@ -1,65 +1,82 @@
 // enable strict mode
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
-    
-    function Tabs() {
-        let bindAll = function() {
-            let menuElements = document.querySelectorAll('[data-tab]');
-            for(let i = 0; i < menuElements.length ; i++) {
-                menuElements[i].addEventListener('click', change, false);
-            }
-        }
-    
-        let clear = function() {
-            let menuElements = document.querySelectorAll('[data-tab]');
-            for(let i = 0; i < menuElements.length ; i++) {
-                menuElements[i].classList.remove('active');
-                let id = menuElements[i].getAttribute('data-tab');
-                document.getElementById(id).classList.remove('active');
-            }
-        }
-    
-        let change = function(e) {
-            clear();
-            e.target.classList.add('active');
-            let id = e.currentTarget.getAttribute('data-tab');
-            document.getElementById(id).classList.add('active');
-        }
-        
-        bindAll();
+    const elements = {
+        navBar: document.querySelector('.navbar'),
+    };
+    const body = document.querySelector('body');
+    if(body) {
+        body.classList.remove('preload');
     }
     
-    let connectTabs = new Tabs();
+    function headerStyle() {
+        const elBtnToTop = document.querySelector('.scroll-top');
+        window.addEventListener('scroll', function () {
+            //console.log(pageYOffset);
+            if(pageYOffset >= 110) {
+                elBtnToTop.classList.add('open');
+            } else {
+                elBtnToTop.classList.remove('open');
+            }
+        })
+    }
+    headerStyle();
+    if (elements.navBar) {
+        window.addEventListener('scroll', function () {
+            //console.log(pageYOffset);
+            if(window.pageYOffset > elements.navBar.offsetTop) {
+                elements.navBar.classList.add('scroll');
+            } else {
+                elements.navBar.classList.remove('scroll');
+            }
+        })
+    }
     
-    let productBtnMinus = document.querySelectorAll('.ticket-offer__qty-minus');
-    let productBtnPlus = document.querySelectorAll('.ticket-offer__qty-plus');
-    let productInputQty = document.querySelectorAll('.ticket-offer__qty-input');
-    
-    if (productBtnMinus) {
-        productBtnMinus.forEach(item => {
-            item.addEventListener('click', function () {
-                if (item.nextElementSibling.value >= 1) {
-                    item.nextElementSibling.value = +item.nextElementSibling.value-1;
+    /*init smooth scroll*/
+    const elsScrollTo = document.querySelectorAll("[data-waypoint-to]");
+    elsScrollTo.forEach(item => {
+        item.addEventListener('click', function (e) {
+            e.preventDefault()
+            const targetId = '#'+item.getAttribute("data-waypoint-to");
+            /*if( targetId) {
+                document.querySelector(targetId).scrollIntoView({behavior:"smooth"});
+            }*/
+            if( targetId) {
+                const targetPosition = document.querySelector(targetId).offsetTop;
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                const duration = 1000;
+                let start = null;
+                window.requestAnimationFrame(step);
+                function step(timestamp) {
+                    if (!start) start = timestamp;
+                    const progress = timestamp - start;
+                    window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
+                    if (progress < duration) window.requestAnimationFrame(step);
                 }
-                
-            });
+            }
+            
         })
-        
-    }
-    if (productBtnPlus) {
-        productBtnPlus.forEach(item => {
-            item.addEventListener('click', function () {
-                console.log(item.previousElementSibling)
-                item.previousElementSibling.classList.add('active');
-                item.previousElementSibling.value = +item.previousElementSibling.value+1;
-            });
-        })
-        
-    }
-    
-    productInputQty.forEach(item => {
-        if (item.value > 0) {
-            item.classList.add("active")
-        }
     })
+    function linear(t, b, c, d) {
+        return c*t/d + b;
+    }
+    function easeInOutQuad(t, b, c, d) {
+        t /= d/2;
+        if (t < 1) return c/2*t*t + b;
+        t--;
+        return -c/2 * (t*(t-2) - 1) + b;
+    }
+    function easeInOutCubic(t, b, c, d) {
+        t /= d/2;
+        if (t < 1) return c/2*t*t*t + b;
+        t -= 2;
+        return c/2*(t*t*t + 2) + b;
+    }
+    /*end init smooth scroll*/
+    
+    
+    
+    
+    
 });

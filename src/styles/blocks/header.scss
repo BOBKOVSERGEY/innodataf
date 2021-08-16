@@ -1,22 +1,6 @@
 .header {
-  padding: 1rem 0;
   background: white;
   position: sticky;
   top:0;
-  &__logo {
-    display: inline-block;
-    & img {
-      width: 5rem;
-    }
-  }
-  &__nav-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  &__heading {
-    font-family: $fontMedium;
-    font-size: 1.8rem;
-    color: $colorRed;
-  }
+  box-shadow: 0 4px 50px rgba(65, 105, 178, 0.1);
 }
