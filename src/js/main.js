@@ -3,7 +3,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const elements = {
         navBar: document.querySelector('.navbar'),
+        navBarMenu: document.querySelector('.navbar__nav'),
+        navBarBurger: document.querySelector('.navbar__burger'),
+        navBarChevron: document.querySelectorAll('.navbar__nav-dropdown:before'),
     };
+    console.log(elements.navBarChevron)
     const body = document.querySelector('body');
     if(body) {
         body.classList.remove('preload');
@@ -75,7 +79,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     /*end init smooth scroll*/
     
+    /**menu**/
     
+    const showMenu = (burger, nav)=>{
+        if(burger && nav){
+            burger.addEventListener('click', (e)=>{
+                nav.classList.toggle('show');
+                burger.classList.toggle('active');
+                e.stopPropagation();
+            })
+        }
+    };
+    showMenu(elements.navBarBurger,elements.navBarMenu);
+    if (elements.navBarMenu) {
+        body.addEventListener('click', function (e) {
+            if (!e.target.closest('.navbar__nav')) {
+                elements.navBarMenu.classList.remove('show')
+                elements.navBarBurger.classList.remove('active')
+            }
+        })
+    }
+    /**end menu**/
     
     
     

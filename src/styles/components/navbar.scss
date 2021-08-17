@@ -4,6 +4,163 @@
   justify-content: space-between;
   height: 120px;
   transition: height .3s ease-in-out;
+  @media only screen and (max-width:1200px) {
+    height: 90px;
+  }
+  &-btn {
+    @media only screen and (max-width:1200px) {
+      display: none;
+    }
+  }
+  &__burger {
+    width: 40px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 15px;
+    & i {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 2px;
+      background-color: $colorPrimary;
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      &:before {
+        position: absolute;
+        bottom: 8px;
+        right: 0;
+        width: 80%;
+        height: 2px;
+        background-color: $colorPrimary;
+        content: "";
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+      &:after {
+        position: absolute;
+        bottom: -8px;
+        right: 0;
+        width: 60%;
+        height: 2px;
+        background-color: $colorPrimary;
+        content: "";
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+    }
+    &:hover i {
+      background-color: $colorSecondary;
+    }
+    &:hover i:before {
+      width: 80%;
+      background-color: $colorSecondary;
+    }
+    &:hover i:after {
+      width: 60%;
+      background-color: $colorSecondary;
+    }
+    @media only screen and (min-width:1200px) {
+      display: none;
+    }
+    &.active i {
+      background-color: transparent;
+    }
+
+    &.active i:before, &.active i:after {
+      top: 0;
+      width: 35px;
+    }
+
+    &.active i:before {
+      transform: rotate(45deg);
+    }
+
+    &.active i:after {
+      top: 10px;
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+  &__nav-dropdown {
+    position: relative;
+    &:before {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      content: '';
+      width: 16px;
+      height: 16px;
+      background: url("../images/chevron.svg") no-repeat center;
+      z-index: 3;
+      cursor: pointer;
+      transform: rotate(180deg);
+      display: none;
+      @media only screen and (max-width:1200px) {
+        display: block;
+      }
+    }
+    &-menu {
+      position: absolute;
+      background: white;
+      border-top: 3px solid $colorBlue;
+      top: 100%;
+      left: 0;
+      transform: translateY(50px);
+      visibility: hidden;
+      opacity: 0;
+      z-index: 9;
+      transition: .35s .5s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 240px;
+      box-shadow: 0 4px 40px rgba(65, 105, 178, 0.07);
+      padding: 0;
+      &_big {
+        width: 450px;
+        @media only screen and (max-width:1200px) {
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width:1200px) {
+        width: 100%;
+        border-top: none;
+        position: static;
+        background: none;
+        box-shadow: none;
+        transform: translateY(0);
+        display: none;
+      }
+
+    }
+    &:hover > &-menu {
+      //display: block;
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+      transition: .35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:hover:before {
+      transform: rotate(0deg);
+    }
+    &-item {
+      transition: background .3s ease-in-out;
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+      & a {
+        padding: 8px 20px;
+        display: block;
+        color: $colorPrimary;
+        transition: color .3s ease-in-out;
+        @media only screen and (max-width:1200px) {
+          padding: 8px 20px 8px 40px;
+        }
+      }
+      &:hover {
+        background: $colorBlue;
+        & a {
+          color: white;
+        }
+      }
+    }
+  }
   &.scroll {
     height: 90px;
   }
@@ -16,6 +173,10 @@
     @media only screen and (max-width: 1400px) {
       margin-right: 0;
     }
+    @media only screen and (max-width:1200px) {
+      width: 170px;
+      margin-top: -14.5px;
+    }
     & img {
 
     }
@@ -26,6 +187,9 @@
     @media only screen and (max-width: 1400px) {
       margin-right: 1.5rem;
     }
+    @media only screen and (max-width:1200px) {
+      margin-left: unset;
+    }
     & i {
       display: block;
       width: 30px;
@@ -35,6 +199,10 @@
       opacity: 1;
       transform: scale(1);
       transition: opacity .3s  ease-in-out;
+      @media only screen and (max-width:1200px) {
+        width: 25px;
+        height: 25px;
+      }
       &:hover {
         opacity: .75;
       }
@@ -44,6 +212,29 @@
     display: flex;
     align-items: center;
     align-self: stretch;
+    @media (max-width: 1200px) {
+      position: fixed;
+      top: 90px;
+      left: -100%;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(21px);
+      width: 80%;
+      height: calc(100vh - 90px);
+      padding: 2rem 0;
+      z-index: var(--z-fixed);
+      transition: .5s;
+      overflow-y: auto;
+      align-items: flex-start;
+      flex-direction: column;
+      @-moz-document url-prefix() {
+        //background: rgb(84,75,89);
+        background: white;
+        backdrop-filter: blur(21px);
+      }
+    }
+    &.show {
+      left: 0;
+    }
     &>li {
       font-family: $fontMedium;
       font-size: 1.6rem;
@@ -52,11 +243,18 @@
       align-self: stretch;
       display: flex;
       align-items: center;
-      text-transform: uppercase;
       @media only screen and (max-width: 1400px) {
         padding-left: 1rem;
         padding-right: 1rem;
       }
+      @media only screen and (max-width:1200px) {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       &>a {
         color: $colorPrimary;
         display: flex;
@@ -64,10 +262,24 @@
         align-self: stretch;
         padding-left: 1rem;
         padding-right: 1rem;
-        transition: color .3s ease-in-out;
+        transition: color .3s ease-in-out,  background .3s ease-in-out;
+        text-transform: uppercase;
+
+        @media only screen and (max-width:1200px) {
+          width: 100%;
+          padding: 8px 20px;
+        }
         &:hover {
           color: $colorSecondary;
+          @media only screen and (max-width:1200px) {
+            background: $colorBlue;
+            color: white;
+          }
         }
+      }
+      &.active> a {
+        background: $colorBlue;
+        color: white;
       }
     }
   }
