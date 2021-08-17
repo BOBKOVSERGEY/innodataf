@@ -49,15 +49,15 @@
       }
     }
     &:hover i {
-      background-color: $colorSecondary;
+      background-color: $colorPrimary;
     }
     &:hover i:before {
-      width: 80%;
-      background-color: $colorSecondary;
+      width: 100%;
+      background-color: $colorPrimary;
     }
     &:hover i:after {
-      width: 60%;
-      background-color: $colorSecondary;
+      width: 100%;
+      background-color: $colorPrimary;
     }
     @media only screen and (min-width:1200px) {
       display: none;
@@ -82,22 +82,32 @@
   }
   &__nav-dropdown {
     position: relative;
-    &:before {
+    &-chevron {
       position: absolute;
       right: 15px;
       top: 15px;
       content: '';
       width: 16px;
-      height: 16px;
+      height: 8px;
       background: url("../images/chevron.svg") no-repeat center;
       z-index: 3;
       cursor: pointer;
       transform: rotate(180deg);
       display: none;
+      transition: transform .3s ease-in-out;
       @media only screen and (max-width:1200px) {
         display: block;
       }
+      &.open + .expandable {
+        max-height: 100%;
+        transform: scaleY(1);
+        opacity: 1;
+      }
+      &.open {
+        transform: rotate(0deg);
+      }
     }
+
     &-menu {
       position: absolute;
       background: white;
@@ -124,8 +134,11 @@
         position: static;
         background: none;
         box-shadow: none;
-        transform: translateY(0);
-        display: none;
+        max-height: 0;
+        transform: scaleY(0);
+        transform-origin: top;
+        overflow: hidden;
+        visibility: visible;
       }
 
     }
@@ -136,9 +149,7 @@
       opacity: 1;
       transition: .35s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    &:hover:before {
-      transform: rotate(0deg);
-    }
+
     &-item {
       transition: background .3s ease-in-out;
       &:not(:last-child) {

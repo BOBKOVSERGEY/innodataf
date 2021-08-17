@@ -5,9 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
         navBar: document.querySelector('.navbar'),
         navBarMenu: document.querySelector('.navbar__nav'),
         navBarBurger: document.querySelector('.navbar__burger'),
-        navBarChevron: document.querySelectorAll('.navbar__nav-dropdown:before'),
+        navBarChevron: document.querySelectorAll('.navbar__nav-dropdown-chevron'),
     };
-    console.log(elements.navBarChevron)
+    // mobile menu expand
+    elements.navBarChevron.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            btn.classList.toggle("open");
+        });
+    });
     const body = document.querySelector('body');
     if(body) {
         body.classList.remove('preload');
