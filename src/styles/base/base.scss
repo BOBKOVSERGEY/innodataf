@@ -34,9 +34,9 @@ body {
     border-radius: 7px;
     height: 71px;
   }
-  /*@media only screen and (max-width: 768px) {
-    font-size: 2rem;
-  }*/
+  @media only screen and (max-width: 768px) {
+    font-size: 1.6rem;
+  }
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -132,10 +132,12 @@ a {
   color: #007bff;
   text-decoration: none;
   background-color: transparent;
+
+  transition: color .3s ease-in-out;
 }
 
 a:hover {
-  color: #0056b3;
+  color: $colorBlue;
   text-decoration: underline;
 }
 

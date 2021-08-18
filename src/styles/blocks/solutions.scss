@@ -1,0 +1,66 @@
+.solutions {
+  position: relative;
+  padding-top: 60px;
+  &-item {
+    position: relative;
+    background: white;
+    box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 290px;
+    margin-bottom: 30px;
+    transition: background .3s ease-in-out;
+    &__icon {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      z-index: 2;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 112px;
+        height: 168px;
+        left: -30px;
+        top: 50%;
+        transform: translate(0, -50%);
+        background: url("../images/bg-solution.svg") no-repeat center;
+        z-index: -1;
+      }
+      & img {
+
+      }
+    }
+    &__heading {
+      font-family: $fontBold;
+      text-align: center;
+      font-size: 2.5rem;
+      & a {
+        color: $colorPrimary;
+        transition: color .3s ease-in-out;
+        &:hover {
+          color: white;
+        }
+        &:before {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 3;
+          pointer-events: auto;
+          content: "";
+        }
+      }
+    }
+    &:hover {
+      background: $colorBlue;
+    }
+
+  }
+
+}

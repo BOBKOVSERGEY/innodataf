@@ -42,5 +42,49 @@
     background-color: gray;
     cursor: not-allowed;
   }
+  &-all {
+    color: $colorBlue;
+    margin-left: auto;
+    padding-right: 70px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 52px;
+      height: 52px;
+      border: 1px solid $colorBlue;
+      transform: translate(0 ,-50%);
+      border-radius: 50%;
+      background-image: url(../images/btn-all.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 23px 30px;
+      z-index: 2;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 52px;
+      height: 52px;
+      background: $colorBlue;
+      transform: translate(0 ,-50%);
+      z-index: 1;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+    }
+    &-gray {
+      &:before {
+        background-image: url(../images/btn-all-2.svg);
+      }
+    }
+    &:hover:after {
+      opacity: 1;
+    }
+  }
 
 }

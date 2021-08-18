@@ -84,12 +84,13 @@
     position: relative;
     &-chevron {
       position: absolute;
-      right: 15px;
-      top: 15px;
+      right: 0;
+      top: 0;
       content: '';
-      width: 16px;
-      height: 8px;
+      width: 45px;
+      height: 40px;
       background: url("../images/chevron.svg") no-repeat center;
+      background-size: 16px 8px;
       z-index: 3;
       cursor: pointer;
       transform: rotate(180deg);

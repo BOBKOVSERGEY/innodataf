@@ -1,0 +1,18 @@
+.heading-section {
+  font-size: 6rem;
+  color: $colorPrimary;
+  @media only screen and (max-width:1400px) {
+    font-size: 5rem;
+  }
+  @media only screen and (max-width:1200px) {
+    font-size: 4rem;
+  }
+  @media only screen and (max-width:480px) {
+    font-size: 3.2rem;
+  }
+  &-wrap {
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,16 @@
+.projects {
+  background: #eeeeee;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  &-item {
+    background: $colorBlue;
+    min-height: 400px;
+  }
+  &__description {
+    margin-top: 50px;
+  }
+  &__all {
+    text-align: right;
+    margin-top: 150px;
+  }
+}
