@@ -1,0 +1,80 @@
+.contacts-us {
+  background-image: linear-gradient(#eee 50%, #fff 50%);
+  &__wrap {
+    background: #FFFFFF;
+    box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
+    border-radius: 10px;
+    padding: 30px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    & h2 {
+      font-family: $fontBold;
+      font-size: 4.6rem;
+      margin-bottom: 50px;
+      text-align: center;
+      line-height: 1.3;
+      max-width: 750px;
+      color: $colorPrimary;
+      @media only screen and (max-width: 992px) {
+        font-size: 4rem;
+      }
+      @media only screen and (max-width: 768px) {
+        font-size: 3.6rem;
+      }
+      @media only screen and (max-width: 480px) {
+        font-size: 2.9rem;
+      }
+    }
+    &-bg {
+      @media only screen and (max-width: 992px) {
+        display: none;
+      }
+    }
+    &-bg-left {
+      position: absolute;
+      width: 276px;
+      height: 310px;
+      background: url("../images/bg-contacts-us-1.svg") no-repeat center;
+      left: -50px;
+      top: 50%;
+      transform: translate(0, -50%);
+      z-index: 1;
+    }
+    &-bg-right {
+      position: absolute;
+      width: 113px;
+      height: 162px;
+      background: url("../images/bg-contacts-us-2.svg") no-repeat center;
+      right: -10px;
+      top: 30px;
+      z-index: 1;
+    }
+    &-bg-right-gm-big{
+      position: absolute;
+      right: -30px;
+      top: 5px;
+      fill:#fba96e;
+      fill-opacity:0.4;
+      width: 139px;
+      height: 205px;
+      z-index: 2;
+      filter: blur(3px) drop-shadow(0 0 1px rgba(white, .2));
+    }
+    &-bg-left-gm-big{
+      position: absolute;
+      left: -90px;
+      top: 50%;
+      fill:#fba96e;
+      fill-opacity:0.4;
+      width: 283px;
+      height: 417px;
+      transform: translate(0, -50%);
+      z-index: 2;
+      filter: blur(7px) drop-shadow(0 0 1px rgba(white, .2));
+    }
+  }
+}

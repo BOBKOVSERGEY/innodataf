@@ -41,17 +41,17 @@
         opacity: 0;
       }
     }
-    /*&:after {
+    &:after {
       content: '';
       position: absolute;
-      left: 0;
-      top: -50%;
-      width: 1200px;
-      height: 802px;
+      left: -15px;
+      top: -687px;
+      width: 1172px;
+      height: 1003px;
       //transform: translate(0, -50%);
       z-index: -1;
       background: url("../images/shape.svg") no-repeat center;
-    }*/
+    }
   }
   &__shape {
     position: relative;

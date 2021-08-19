@@ -1,10 +1,82 @@
 .projects {
   background: #eeeeee;
-  padding-top: 30px;
+  padding-top: 60px;
   padding-bottom: 100px;
+  @media only screen and (max-width: 992px) {
+    padding-bottom: 0;
+  }
   &-item {
+    position: relative;
     background: $colorBlue;
     min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 10px 10px 10px 10px;
+    transition: background .3s ease-in-out;
+    @media only screen and (max-width: 992px) {
+      margin-bottom: 200px;
+    }
+    &__img {
+      position: absolute;
+      left: 50%;
+      top: -40%;
+      width: 287px;
+      height: 350px;
+      transform: translate(-50%, 0);
+      background-position: center bottom;
+      background-repeat: no-repeat;
+    }
+    &__heading {
+      font-family: $fontBold;
+      font-size: 2.5rem;
+      background: white;
+      margin-bottom: 0;
+      padding: 10px 30px 30px 30px;
+      border-radius: 0 0 10px 10px;
+      transition: background .3s ease-in-out;
+      min-height: 150px;
+      @media only screen and (max-width:480px) {
+        font-size: 2rem;
+      }
+      & a {
+        color: $colorPrimary;
+        transition: color .3s ease-in-out;
+        &:hover {
+          color: white;
+        }
+        &:before {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 3;
+          pointer-events: auto;
+          content: "";
+        }
+      }
+    }
+    &__svg {
+      width: 100%;
+      position: relative;
+      bottom: -1px;
+      display: block;
+      fill: #fff;
+      transition: fill .3s ease-in-out;
+    }
+    &:hover  {
+      background: white;
+    }
+    &:hover &__heading {
+      background: $colorBlue
+    }
+    &:hover &__svg {
+      fill: $colorBlue;
+    }
+    &:hover a {
+      color: white;
+    }
   }
   &__description {
     margin-top: 50px;
@@ -12,5 +84,11 @@
   &__all {
     text-align: right;
     margin-top: 150px;
+    @media only screen and (max-width:992px){
+      margin-top: 30px;
+      text-align: left;
+      margin-bottom: 200px;
+    }
+
   }
 }

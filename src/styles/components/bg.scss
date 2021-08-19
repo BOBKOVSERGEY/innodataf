@@ -2,19 +2,10 @@
   width: 100%;
   position: relative;
   bottom: -1px;
+  margin-top: 60px;
   & svg {
     width: 100%;
     display: block;
     fill: #eee;
-  }
-}
-.bg-svg-project {
-  width: 100%;
-  position: relative;
-  bottom: -1px;
-  & svg {
-    width: 100%;
-    display: block;
-    fill: #fff;
   }
 }

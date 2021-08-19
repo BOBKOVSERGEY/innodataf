@@ -1,6 +1,9 @@
 .heading-section {
   font-size: 6rem;
   color: $colorPrimary;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
   @media only screen and (max-width:1400px) {
     font-size: 5rem;
   }
@@ -14,5 +17,9 @@
     margin-bottom: 70px;
     display: flex;
     align-items: center;
+    @media only screen and (max-width:992px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }

@@ -39,6 +39,9 @@
       font-family: $fontBold;
       text-align: center;
       font-size: 2.5rem;
+      @media only screen and (max-width:480px) {
+        font-size: 2rem;
+      }
       & a {
         color: $colorPrimary;
         transition: color .3s ease-in-out;

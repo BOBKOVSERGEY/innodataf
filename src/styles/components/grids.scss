@@ -43,8 +43,8 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) * -.5);
-  margin-left: calc(var(--bs-gutter-x) * -.5);
+  margin-right: -15px;
+  margin-left: -15px;
 }
 .row > * {
   box-sizing: border-box;
