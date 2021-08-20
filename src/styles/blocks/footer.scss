@@ -5,10 +5,16 @@
   background: $colorBlue;
   color: white;
   z-index: 1;
+  @media only screen and (max-width:480px) {
+    padding-top: 50px;
+  }
   &-bg {
     &-el {
       position: absolute;
       z-index: -1;
+      @media only screen and (max-width:992px) {
+        display: none;
+      }
     }
     &__one {
       fill: #07306D;
