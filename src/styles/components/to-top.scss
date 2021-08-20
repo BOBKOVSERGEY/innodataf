@@ -14,7 +14,9 @@
   background: linear-gradient(96.11deg, #F47920 -7.48%, rgba(247, 187, 98, 0.7) 178.25%);
   border: none;
   transition: 1s ease;
-
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
   &:before {
     content: '';
     position: absolute;

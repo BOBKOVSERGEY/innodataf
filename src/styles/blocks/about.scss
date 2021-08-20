@@ -1,8 +1,90 @@
 .about-main {
-  padding: 70px 0;
+  padding-top: 70px;
   &__wrap {
+    position: relative;
     background: #F0F1F1;
     border-radius: 20px;
-    padding: 30px;
+    padding: 90px 30px;
+    z-index: 1;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: url("../images/quotation-mark-big.svg") no-repeat center;
+      bottom:20px;
+      right:50px;
+      z-index: -1;
+    }
+    @media only screen and (max-width: 375px) {
+      padding: 30px 15px;
+    }
+  }
+  &__img-wrap {
+    position: relative;
+    width: 311px;
+    height: 311px;
+    margin: 0 auto;
+    //overflow: hidden;
+    padding: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(133.99deg, #F58C39 -2.24%, #F5B539 97.79%);
+    @media only screen and (max-width: 1200px) {
+      width: 270px;
+      height: 270px;
+    }
+    @media only screen and (max-width: 992px) {
+      margin-bottom: 30px;
+    }
+
+    @media only screen and (max-width: 375px) {
+      width: 250px;
+      height: 250px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: url("../images/quotation-mark-small.svg") no-repeat center;
+      top:0;
+      right:20px;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    & img {
+      border-radius: 50%;
+      transform: scale(1.4);
+    }
+  }
+  &__signature {
+    position: relative;
+    padding-left: 55px;
+    color: $colorPrimary;
+    margin-top: 30px;
+    line-height: 1;
+    & span {
+      font-family: $fontMedium;
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+      display: block;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 50px;
+      background: url("../images/tie.svg") no-repeat center;
+      top:50%;
+      left:0;
+      transform: translate(0, -50%);
+    }
   }
 }

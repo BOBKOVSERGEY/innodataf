@@ -39,6 +39,9 @@
       @media only screen and (max-width:480px) {
         font-size: 2rem;
       }
+      @media only screen and (max-width: 375px) {
+        padding: 10px 15px 30px 15px;
+      }
       & a {
         color: $colorPrimary;
         transition: color .3s ease-in-out;

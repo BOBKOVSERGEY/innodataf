@@ -9,3 +9,14 @@
     fill: #eee;
   }
 }
+.bg-svg-bottom-footer {
+  width: 100%;
+  position: relative;
+  bottom: -1px;
+  margin-top: 70px;
+  & svg {
+    width: 100%;
+    display: block;
+    fill: $colorBlue
+  }
+}
