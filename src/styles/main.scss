@@ -4,10 +4,15 @@
 /***base***/
 @import "base/variables";
 @import "base/base";
+@import "base/layout";
+
+/***pages***/
+@import "pages/page-about";
+
 
 
 /***vendors***/
-
+@import "vendors/swiper";
 
 
 /***components***/
@@ -20,6 +25,8 @@
 @import "components/heading";
 @import "components/bg";
 @import "components/socicon";
+@import "components/preloader";
+@import "components/breadcrumbs";
 
 
 /*blocks*/

@@ -1,0 +1,111 @@
+.page-about-first-section {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 60px;
+
+  top: -84px;
+  z-index: 1;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    width: 1600px;
+    height: 1600px;
+    background: #F0F1F1;
+    position: absolute;
+    top: -800px;
+    right: -800px;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  &__content {
+    font-size: 2.5rem;
+    margin-top: 60px;
+  }
+  &__img {
+    text-align: right;
+    & img {
+      max-width: 570px;
+
+    }
+  }
+}
+.page-about {
+  &-our-team {
+    position: relative;
+    top: -240px;
+    z-index: 2;
+    &__heading {
+      font-weight: bold;
+      color: $colorPrimary;
+      font-size: 6rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1;
+      margin-bottom: 60px;
+      @media only screen and (max-width:1400px) {
+        font-size: 5rem;
+      }
+      @media only screen and (max-width:1200px) {
+        font-size: 4rem;
+      }
+      @media only screen and (max-width:480px) {
+        font-size: 3.2rem;
+      }
+    }
+    &-big-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+      &__signature {
+        position: relative;
+        //padding-left: 55px;
+
+        margin-top: 30px;
+        line-height: 1;
+        & span {
+          font-family: $fontBold;
+          color: $colorPrimary;
+          font-size: 2.5rem;
+          margin-bottom: 5px;
+          display: block;
+        }
+      }
+      &__text {
+        position: relative;
+        background: #FFFFFF;
+        box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
+        border-radius: 10px;
+        padding: 30px 50px;
+        margin-left: -70px;
+        z-index: 1;
+        &:before {
+          content: '';
+          position: absolute;
+          width: 90px;
+          height: 90px;
+          background: url("../images/quotation-mark-big.svg") no-repeat center;
+          bottom:20px;
+          right:50px;
+          z-index: -1;
+          opacity: .5;
+        }
+      }
+      &__img {
+        max-width: 470px;
+        height: 415px;
+        width: 100%;
+        flex: 0 0 auto;
+        & img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          margin: 0;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

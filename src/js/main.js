@@ -1,6 +1,40 @@
 // enable strict mode
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
+    
+    var swiper = new Swiper(".about-page__team", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+    /*
+    * slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },*/
+    
+    const preloader = document.getElementById("preloader");
+   if(preloader) {
+       setInterval(function () {
+           preloader.style.opacity = '0';
+           //preloader.style.display = 'none';
+           preloader.addEventListener('transitionend', () => preloader.remove());
+       }, 200);
+   }
+   
     const elements = {
         navBar: document.querySelector('.navbar'),
         navBarMenu: document.querySelector('.navbar__nav'),
