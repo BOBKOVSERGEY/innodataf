@@ -1,0 +1,105 @@
+.team {
+  margin: 50px 0;
+  &__item {
+    min-height: 520px;
+    box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
+    border-radius: 10px;
+    background: #fff;
+  }
+  &__item-img {
+    border-radius: 10px 10px 0 0;
+    height: 350px;
+    overflow: hidden;
+  }
+  &__item-text {
+    padding: 30px;
+    & h2 {
+      font-family: $fontBold;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: $colorPrimary;
+    }
+   & p {
+     margin: 0;
+   }
+  }
+  &__pagination {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    @media only screen and (min-width: 480px) {
+      display: none;
+    }
+
+    &.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 8px;
+    }
+
+    & .swiper-pagination-bullet {
+      width: 11px;
+      height: 11px;
+      border-radius: 10px;
+      background: #eeeeee;
+      opacity: 1;
+      transition: all 0.3s;
+    }
+    & .swiper-pagination-bullet-active {
+      opacity: 1;
+      background: $colorSecondary;
+      width: 30px;
+      box-shadow: 0 0 20px rgba($colorSecondary, 0.3);
+    }
+
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    @media only screen and (max-width: 480px) {
+      display: none;
+    }
+    &-next, &-prev {
+      position: relative;
+      background: $colorSecondary;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: opacity .3s ease-in-out;
+    }
+    &-next.swiper-button-disabled, &-prev.swiper-button-disabled {
+      opacity: .35;
+      cursor: auto;
+      pointer-events: none
+    }
+    &-next {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../images/arrow-next.svg") no-repeat center;
+        background-size: 22px 28px;
+      }
+    }
+    &-prev {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../images/arrow-next.svg") no-repeat center;
+        background-size: 22px 28px;
+        transform: rotate(180deg);
+      }
+    }
+    & div:first-child{
+      margin-right: 20px;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.history-company {
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    @media only screen and (max-width: 480px) {
+      display: none;
+    }
+    &-next, &-prev {
+      position: relative;
+      background: $colorSecondary;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: opacity .3s ease-in-out;
+    }
+    &-next.swiper-button-disabled, &-prev.swiper-button-disabled {
+      opacity: .35;
+      cursor: auto;
+      pointer-events: none
+    }
+    &-next {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../images/arrow-next.svg") no-repeat center;
+        background-size: 22px 28px;
+      }
+    }
+    &-prev {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../images/arrow-next.svg") no-repeat center;
+        background-size: 22px 28px;
+        transform: rotate(180deg);
+      }
+    }
+    & div:first-child{
+      margin-right: 20px;
+    }
+  }
+  &__item {
+    background: linear-gradient(62deg, #4B79CE 11.21%, #426AB3 59.3%, #2B4A81 128.49%);
+    border-radius: 20px;
+    min-height: 500px;
+    color: white;
+    padding-left: 60px;
+    //padding-top: 125px;
+    position: relative;
+    display: flex;
+    //align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    &-heading {
+      font-family: $fontBold;
+      font-size: 4rem;
+      margin-top: 30px;
+      @media only screen and (max-width: 1200px) {
+        font-size: 3.2rem;
+      }
+    }
+    &-description {
+      font-size: 2rem;
+    }
+    &-label {
+      display: flex;
+      max-width: 58.33333333%;
+      &-year {
+        width: 60px;
+        height: 110px;
+        background: url("../images/bg-year.svg") no-repeat top -1px center;
+        color: $colorSecondary;
+        text-align: center;
+        padding-top: 50px;
+        flex: 0 0 auto;
+      }
+      &-description {
+        padding-top: 50px;
+        margin-left: 5px;
+      }
+    }
+    &-img {
+      position: absolute;
+      top: -15px;
+      right: -50px;
+      width: 550px;
+      height: 550px;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: -1;
+    }
+  }
+}

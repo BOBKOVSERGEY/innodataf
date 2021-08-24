@@ -2,13 +2,49 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
     
-    var swiper = new Swiper(".about-page__team", {
+    const sliderTeam = new Swiper(".team", {
         slidesPerView: 3,
         spaceBetween: 30,
-        
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".team__btn-next",
+            prevEl: ".team__btn-prev",
+        },
+        pagination: {
+            el: ".team__pagination",
+            clickable: true,
+            //dynamicBullets: true,
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+            },
+            // when window width is >= 640px
+            480: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 640px
+            992: {
+                slidesPerView: 3,
+            }
+        }
+    });
+    const sliderHistoryCompany = new Swiper(".history-company", {
+        effect: "cube",
+        grabCursor: true,
+        cubeEffect: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+        },
+        navigation: {
+            nextEl: ".history-company__btn-next",
+            prevEl: ".history-company__btn-prev",
+        },
+        pagination: {
+            el: ".history-company__pagination",
+            clickable: true,
         },
     });
     /*

@@ -1,5 +1,6 @@
 .slider {
   filter: drop-shadow(0px 4px 50px rgba(66, 106, 179, 0.2));
+
   &__heading {
     font-family: $fontBold;
     font-size: 6.1rem;
@@ -34,11 +35,25 @@
         right: -300px;
       }
       @media only screen and (max-width:992px) {
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0;
+        top: 71px;
+        right: -190px;
+
+        width: 600px;
+        height: 435px;
+      }
+      @media only screen and (max-width:768px) {
+        top: -8px;
+        right: -136px;
+        width: 400px;
+        height: 290px;
+        opacity: .3;
+      }
+      @media only screen and (max-width:480px) {
+        top: 86px;
+        right: -82px;
+        width: 400px;
+        height: 290px;
+        opacity: .3;
       }
     }
     &:after {
@@ -47,10 +62,22 @@
       left: -15px;
       top: -687px;
       width: 1172px;
-      height: 1003px;
+      height: 961px;
       //transform: translate(0, -50%);
       z-index: -1;
       background: url("../images/shape.svg") no-repeat center;
+      @media only screen and (max-width:768px) {
+        left: -15px;
+        top: -230px;
+        width: 510px;
+        height: 418px;
+      }
+      @media only screen and (max-width:480px) {
+        left: -15px;
+        top: -146px;
+        width: 370px;
+        height: 311px;
+      }
     }
   }
   &__shape {
