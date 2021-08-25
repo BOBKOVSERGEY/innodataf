@@ -1,0 +1,9 @@
+.partners {
+  padding-top: 100px;
+  padding-bottom: 120px;
+  background: #eee;
+  clip-path: polygon(0 0, 100% 0, 100% 93%, 0% 100%);
+  @media only screen and (max-width: 992px) {
+    clip-path: polygon(0 0, 100% 0, 100% 98%, 0% 100%);
+  }
+}

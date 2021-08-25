@@ -1,0 +1,131 @@
+.awards-prizes {
+ // padding-bottom: 100px;
+}
+.awards {
+ // height: 500px;
+  & .swiper-wrapper {
+
+  }
+  &__heading {
+    font-family: $fontBold;
+    text-align: center;
+    font-size: 1.6rem;
+    color: $colorPrimary;
+
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    min-height: 200px;
+    margin-bottom: 30px;
+
+    & img {
+      max-width: 150px;
+    }
+  }
+  &__description {
+    background: #FFFFFF;
+    /* тень */
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(65, 105, 177, 0.15);
+    border-radius: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border-radius: 10px;
+
+      left: 47%;
+      top: 0;
+      transform: rotate(45deg) translate(-50%, 0);
+      box-shadow: -5px -5px 5px -5px rgba(65, 105, 177, 0.15);
+      z-index: -1;
+    }
+    & p {
+      font-size: 1.6rem;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    @media only screen and (max-width: 768px) {
+      margin-left: 0;
+      margin-top: 30px;
+    }
+    &-next, &-prev {
+      position: relative;
+      background: $colorSecondary;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: opacity .3s ease-in-out;
+      &:hover {
+        opacity: .75;
+      }
+    }
+    &-next.swiper-button-disabled, &-prev.swiper-button-disabled {
+      opacity: .35;
+      cursor: auto;
+      pointer-events: none
+    }
+    &-next {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../images/arrow-next.svg") no-repeat center;
+        background-size: 22px 28px;
+      }
+    }
+    &-prev {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../images/arrow-next.svg") no-repeat center;
+        background-size: 22px 28px;
+        transform: rotate(180deg);
+      }
+    }
+    & div:first-child{
+      margin-right: 20px;
+    }
+  }
+}
+
+.vendors {
+  padding: 80px 0 100px 0;
+  position: relative;
+}
+.brand-logo {
+  align-self: center;
+  text-align: center;
+  position: relative;
+}
+
+.brand-logo__image {
+  transition: all .4s linear;
+}
+
+.brand-logo:hover .brand-logo__image {
+  transform: scale(0.8, 0.8);
+}

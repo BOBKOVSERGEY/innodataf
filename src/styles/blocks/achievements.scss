@@ -1,0 +1,144 @@
+.achievements {
+  background: white;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: 992px) {
+     flex-direction: column;
+    }
+  }
+  &__col-left,  &__col-right{
+    flex: 1 0 auto;
+  }
+  &__col-left {
+    order: 1;
+  }
+  &__col-center {
+    order: 2;
+  }
+  &__col-right {
+    order: 3;
+  }
+  &__logo {
+    width: 300px;
+    height: 300px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    @media only screen and (max-width: 1200px) {
+      width: 270px;
+      height: 270px;
+    }
+    @media only screen and (max-width: 992px) {
+      margin: 30px 0;
+    }
+    & img {
+      max-width: 200px;
+    }
+  }
+  &__item {
+    font-family: $fontBold;
+    color: $colorPrimary;
+    width: 443px;
+    height: 223px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    @media only screen and (max-width: 1400px) {
+      width: 370px;
+      height: 186px;
+      font-size: 1.5rem;
+    }
+    @media only screen and (max-width: 1200px) {
+      width: 270px;
+      height: 136px;
+      font-size: 1.2rem;
+    }
+    @media only screen and (max-width: 992px) {
+      font-size: 1rem;
+    }
+    &_1 {
+      background-image: url("../images/achievement-1.svg");
+      margin-left: auto;
+      padding: 50px 65px 50px 150px;
+      @media only screen and (max-width: 1400px) {
+        padding: 50px 50px 50px 120px;
+      }
+      @media only screen and (max-width: 1200px) {
+        padding: 30px 30px 30px 80px;
+      }
+
+    }
+    &_2 {
+      background-image: url("../images/achievement-2.svg");
+      margin-left: -30px;
+      padding: 50px 65px 50px 180px;
+      @media only screen and (max-width: 1400px) {
+        padding: 50px 65px 50px 150px;
+      }
+      @media only screen and (max-width: 1200px) {
+        padding: 30px 50px 30px 100px;
+      }
+      @media only screen and (max-width: 992px) {
+        margin-left: unset;
+      }
+    }
+    &_3 {
+      background-image: url("../images/achievement-3.svg");
+      margin-left: auto;
+      padding: 50px 65px 50px 180px;
+      @media only screen and (max-width: 1400px) {
+        padding: 50px 65px 50px 160px;
+      }
+      @media only screen and (max-width: 1200px) {
+        padding: 30px 50px 30px 120px;
+      }
+    }
+    &_4 {
+      background-image: url("../images/achievement-4.svg");
+      padding: 50px 65px 50px 195px;
+      @media only screen and (max-width: 1400px) {
+        padding: 50px 65px 50px 165px;
+      }
+      @media only screen and (max-width: 1200px) {
+        padding: 30px 50px 30px 125px;
+      }
+    }
+    &_5 {
+      background-image: url("../images/achievement-5.svg");
+      margin-left: auto;
+      margin-right: -30px;
+      padding: 50px 65px 50px 210px;
+      @media only screen and (max-width: 1400px) {
+        padding: 50px 30px 50px 180px;
+      }
+      @media only screen and (max-width: 1200px) {
+        padding: 30px 15px 30px 130px;
+      }
+      @media only screen and (max-width: 992px) {
+        margin-right: unset;
+      }
+
+    }
+    &_6 {
+      background-image: url("../images/achievement-6.svg");
+      padding: 50px 65px 50px 210px;
+      @media only screen and (max-width: 1400px) {
+        padding: 50px 30px 50px 180px;
+      }
+      @media only screen and (max-width: 1200px) {
+        padding: 30px 15px 30px 130px;
+      }
+    }
+  }
+
+}

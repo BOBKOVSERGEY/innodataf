@@ -47,6 +47,39 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true,
         },
     });
+    const awardsSlider = new Swiper('.awards', {
+        slidesPerView : 5,
+        loop: true,
+        speed: 1000,
+        spaceBetween : 30,
+        //grabCursor: true,
+        navigation: {
+            nextEl: ".awards__btn-next",
+            prevEl: ".awards__btn-prev",
+        },
+        autoplay: {
+            delay: 3000,
+        },
+        breakpoints: {
+            
+            
+            991:{
+                slidesPerView : 5
+            },
+            
+            767:{
+                slidesPerView : 3
+                
+            },
+            
+            575:{
+                slidesPerView : 2
+            },
+            320: {
+                slidesPerView: 1,
+            },
+        }
+    });
     /*
     * slidesPerView: 3,
         spaceBetween: 30,
