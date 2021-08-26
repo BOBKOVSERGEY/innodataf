@@ -5,11 +5,27 @@
   flex-direction: column;
   & .content {
     flex: 1 0 auto;
+    &__bottom-block {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      @media only screen and (max-width:992px) {
+        flex-direction: column;
+      }
+      & .btn-all {
+        margin-left: auto;
+        @media only screen and (max-width:992px) {
+          margin-right: auto;
+        }
+
+      }
+    }
     & h1 {
       color: $colorPrimary;
       font-size: 6rem;
       text-transform: uppercase;
       letter-spacing: 1px;
+      margin-bottom: 50px;
       &.white {
         color: white;
       }
@@ -21,6 +37,7 @@
       }
       @media only screen and (max-width:480px) {
         font-size: 3.2rem;
+        margin-bottom: 30px;
       }
     }
   }

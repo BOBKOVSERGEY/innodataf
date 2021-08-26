@@ -130,7 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
        setInterval(function () {
            preloader.style.opacity = '0';
            //preloader.style.display = 'none';
-           preloader.addEventListener('transitionend', () => preloader.remove());
+           //preloader.addEventListener('transitionend', () => preloader.remove());
+           preloader.addEventListener('transitionend', () => preloader.style.display = 'none');
        }, 200);
    }
    

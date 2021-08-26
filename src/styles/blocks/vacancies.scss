@@ -19,9 +19,17 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      font-size: 1.6rem;
+      //font-size: 1.6rem;
       color: #646567;
       transition: color .3s ease-in-out;
+      & .btn {
+        margin-top: 15px;
+        margin-left: auto;
+        @media only screen and (max-width:480px) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
       &-icon {
         & svg {
           stroke:#ffaf68;
@@ -76,10 +84,22 @@
     &__anons {
       margin: 15px 0;
       transition: color .3s ease-in-out;
+      &_full {
+        margin: 50px 0;
+
+
+        @media only screen and (min-width:768px) {
+          max-width: 78.33333333%;
+          font-size: 2.5rem;
+        }
+      }
     }
     &__heading {
       font-family: $fontBold;
       font-size: 2.5rem;
+      @media only screen and (max-width:480px) {
+        font-size: 2rem;
+      }
       & a {
         color: $colorPrimary;
         transition: color .3s ease-in-out;
@@ -110,6 +130,32 @@
     &:hover &__info-icon {
       & svg {
         stroke:#ffffff;
+      }
+    }
+    &__content {
+      & h3 {
+        font-weight: normal;
+        color: $colorBlue;
+        font-size: 3rem;
+      }
+      & ul {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        & li {
+          position: relative;
+          margin-bottom: 20px;
+          padding-left: 25px;
+          &:before {
+            content: '';
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #ED6F00;
+            position: absolute;
+            left: 0;
+            top: 10px;
+          }
+        }
       }
     }
   }
