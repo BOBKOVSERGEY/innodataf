@@ -80,6 +80,36 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         }
     });
+    const partnersSlider = new Swiper('.partners__brand', {
+        slidesPerView : 5,
+        loop: true,
+        speed: 3000,
+        spaceBetween : 30,
+        //grabCursor: true,
+        
+        autoplay: {
+            delay: 5000,
+        },
+        breakpoints: {
+            
+            
+            991:{
+                slidesPerView : 5
+            },
+            
+            767:{
+                slidesPerView : 3
+                
+            },
+            
+            575:{
+                slidesPerView : 2
+            },
+            320: {
+                slidesPerView: 1,
+            },
+        }
+    });
     /*
     * slidesPerView: 3,
         spaceBetween: 30,

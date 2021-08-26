@@ -1,5 +1,10 @@
 .contacts-us {
   background-image: linear-gradient(#eee 50%, #fff 50%);
+  &-bottom {
+    background: white;
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
   &__wrap {
     background: #FFFFFF;
     box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);

@@ -6,4 +6,28 @@
   @media only screen and (max-width: 992px) {
     clip-path: polygon(0 0, 100% 0, 100% 98%, 0% 100%);
   }
+  &__brand-wrapper {
+    padding: 70px 0 100px 0;
+    background-color: white;
+  }
+  &__item {
+    align-self: center;
+    text-align: center;
+    &-img {
+      transition: transform .4s ease-in-out;
+      & img {
+        filter: grayscale(100%);
+        opacity: .55;
+        max-width: 170px;
+        transition: filter .4s ease-in-out, opacity .4s ease-in-out;
+      }
+    }
+    &:hover &-img {
+      transform: scale(0.8, 0.8);
+    }
+    &:hover &-img img{
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+  }
 }
