@@ -1,0 +1,70 @@
+.what-tech-will-be-work {
+
+  padding-top: 220px;
+
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+
+  background: #eee;
+  position: relative;
+  z-index: 1;
+  @media only screen and (max-width:768px) {
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+  }
+  &__heading {
+    font-size: 6rem;
+    color: $colorPrimary;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -180px;
+    font-weight: normal;
+    @media only screen and (max-width:1400px) {
+      font-size: 5rem;
+    }
+    @media only screen and (max-width:1200px) {
+      font-size: 4rem;
+    }
+    @media only screen and (max-width:480px) {
+      font-size: 3.2rem;
+      line-height: 1.5;
+    }
+  }
+  &__list {
+    & li {
+      font-family: $fontBold;
+      background: white;
+      min-height: 120px;
+      padding: 35px;
+      margin-bottom: 30px;
+      color: $colorPrimary;
+      font-size: 2.5rem;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      @media only screen and (max-width:768px) {
+        font-size: 2rem;
+      }
+    }
+  }
+  &__before {
+    position: relative;
+  }
+  &__img {
+    position: absolute;
+    width: 409px;
+    height: 620px;
+    z-index: 2;
+    @media only screen and (max-width:1200px) {
+      width: 350px;
+      height: 529px;
+    }
+    @media only screen and (max-width:992px) {
+      width: 209px;
+      height: 317px;
+    }
+    @media only screen and (max-width:768px) {
+      display: none;
+    }
+  }
+}

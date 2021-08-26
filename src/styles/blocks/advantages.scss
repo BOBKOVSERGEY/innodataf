@@ -1,0 +1,9 @@
+.advantages {
+  background: white;
+  padding-top: 70px;
+  padding-bottom: 200px;
+  @media only screen and (max-width:768px) {
+    padding-top:0;
+    padding-bottom: 70px;
+  }
+}

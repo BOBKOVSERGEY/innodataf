@@ -6,9 +6,6 @@
 @import "base/base";
 @import "base/layout";
 
-/***pages***/
-@import "pages/page-about";
-
 
 
 /***vendors***/
@@ -42,8 +39,16 @@
 @import "blocks/about";
 @import "blocks/achievements";
 @import "blocks/partners";
+@import "blocks/advantages";
+@import "blocks/what-tech-will-be-work";
+@import "blocks/vacancies";
 
 
 @import "blocks/footer";
 
 
+
+/***pages***/
+@import "pages/page-about";
+@import "pages/page";
+@import "pages/page-career";

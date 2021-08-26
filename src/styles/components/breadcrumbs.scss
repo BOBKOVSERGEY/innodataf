@@ -7,6 +7,7 @@
   flex-wrap: wrap;
   align-items: center;
   z-index: 2;
+
   & li {
     position: relative;
     &:not(:first-child) {
@@ -34,4 +35,28 @@
     height: 20px;
 
   }
+  &_white {
+    color: #BFCBCB;
+    & li {
+      & a {
+        color: white;
+        transition: color .3s ease-in-out;
+        &:hover {
+          color: #bdbec5;
+        }
+      }
+    }
+    & li+li:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%) rotate(15deg);
+      width: 1px;
+      background: white;
+      height: 20px;
+
+    }
+  }
+
 }

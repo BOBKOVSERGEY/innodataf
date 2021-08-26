@@ -1,0 +1,116 @@
+.vacancies {
+  padding-top: 70px;
+  &-item {
+    position: relative;
+    background: white;
+    box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    padding: 50px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background .3s ease-in-out;
+    @media only screen and (max-width:480px) {
+      padding: 20px;
+    }
+    &__info {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 1.6rem;
+      color: #646567;
+      transition: color .3s ease-in-out;
+      &-icon {
+        & svg {
+          stroke:#ffaf68;
+          transition: stroke .3s ease-in-out;
+        }
+      }
+      &-region {
+        display: flex;
+        align-items: center;
+        margin-right: 50px;
+        margin-top: 15px;
+          & svg {
+            fill:none;
+            stroke-linecap:round;
+            stroke-linejoin:round;
+            stroke-width:2px;
+            width: 24px;
+            height: 28px;
+            margin-right: 10px;
+          }
+      }
+      &-employment {
+        display: flex;
+        align-items: center;
+        margin-right: 50px;
+        margin-top: 15px;
+
+        & svg {
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+          fill:none;
+          stroke-width:2px;
+        }
+      }
+      &-experience {
+        display: flex;
+        align-items: center;
+        margin-right: 50px;
+        margin-top: 15px;
+        & svg {
+          width: 26px;
+          height: 24px;
+          fill:none;
+          stroke-linecap:round;
+          stroke-linejoin:round;
+          stroke-width:2px;
+          margin-right: 10px;
+        }
+      }
+    }
+    &__anons {
+      margin: 15px 0;
+      transition: color .3s ease-in-out;
+    }
+    &__heading {
+      font-family: $fontBold;
+      font-size: 2.5rem;
+      & a {
+        color: $colorPrimary;
+        transition: color .3s ease-in-out;
+        &:hover {
+          color: white;
+        }
+        &:before {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 3;
+          pointer-events: auto;
+          content: "";
+        }
+      }
+    }
+    &:hover {
+      background: $colorBlue;
+    }
+    &:hover &__anons{
+      color: white;
+    }
+    &:hover &__info{
+      color: white;
+    }
+    &:hover &__info-icon {
+      & svg {
+        stroke:#ffffff;
+      }
+    }
+  }
+}

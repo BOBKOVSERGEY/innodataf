@@ -10,7 +10,9 @@
       font-size: 6rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      line-height: 1;
+      &.white {
+        color: white;
+      }
       @media only screen and (max-width:1400px) {
         font-size: 5rem;
       }
