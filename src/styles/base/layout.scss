@@ -29,6 +29,10 @@
       &.white {
         color: white;
       }
+      &.detail {
+        text-transform: unset;
+
+      }
       @media only screen and (max-width:1400px) {
         font-size: 5rem;
       }
@@ -37,6 +41,10 @@
       }
       @media only screen and (max-width:480px) {
         font-size: 3.2rem;
+        margin-bottom: 30px;
+      }
+      @media only screen and (max-width:375px) {
+        font-size: 2.5rem;
         margin-bottom: 30px;
       }
     }
