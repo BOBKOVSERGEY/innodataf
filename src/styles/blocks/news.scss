@@ -107,6 +107,10 @@
       display: flex;
       align-items: center;
       z-index: 3;
+      @media only screen and (max-width:992px) {
+        left: 30px;
+        bottom: 20px;
+      }
       &-type {
         background: rgba(#F0F1F1, 1);
         color: $colorBlue;

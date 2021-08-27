@@ -1,0 +1,105 @@
+.tech {
+  display: flex;
+  border-bottom: none;
+  justify-content: space-around;
+  &__nav {
+    &::-webkit-scrollbar{
+      width: 0;
+      background: transparent;
+    }
+    @media (max-width: 992px) {
+      justify-content: left;
+      flex-wrap: unset;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      padding-bottom: 40px;
+    }
+  }
+  & .nav-item {
+    @media (min-width: 992px) {
+      width: calc(( 100% - 80px ) / 5 );
+      margin-left: 0;
+    }
+    @media (max-width: 992px) {
+      min-width: 220px;
+      width: 100%;
+    }
+
+    text-align: left;
+    margin-left: 15px;
+
+
+  }
+  & .nav-link {
+    position: relative;
+    background: white;
+    box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+      margin-bottom: -1px;
+      background: 0 0;
+      border: none;
+    text-align: left;
+    color: $colorPrimary;
+    font-family: $fontBold;
+    width: 100%;
+    transition: color .3s ease-in-out, background .3s ease-in-out;
+    @media (min-width: 992px) and (max-width: 1200px) {
+      font-size:1.4rem;
+    }
+
+    &.active {
+      position: relative;
+      background: linear-gradient(62deg, #4B79CE 11.21%, #426AB3 59.3%, #2B4A81 128.49%);
+      color: white;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(62deg, #4B79CE 11.21%, #426AB3 59.3%, #2B4A81 128.49%);
+        border-radius: 10px;
+
+        left: 47%;
+        bottom: 0px;
+        transform: rotate(-45deg) translate(-50%, 0);
+        box-shadow: -5px -5px 5px -5px rgba(65, 105, 177, 0.15);
+        z-index: -2;
+      }
+    }
+  }
+  &__tab-content {
+    margin-top: 50px;
+    & .tab-pane {
+      color: white;
+      padding: 50px;
+      background: radial-gradient(88.77% 152.06% at 31.33% -63.77%, #4C74BC 0%, #83A7E8 31%, #174497 100%);
+      border-radius: 20px;
+    }
+  }
+  &__heading {
+    font-family: $fontBold;
+    font-size: 4.5rem;
+    margin-bottom: 30px;
+    @media (max-width: 1200px) {
+      font-size:3.6rem;
+    }
+    @media (max-width: 992px) {
+      font-size:3.2rem;
+    }
+  }
+  &__img {
+    text-align: center;
+    & img {
+      max-height: 450px;
+    }
+    @media (max-width: 992px) {
+      margin-bottom: 30px;
+    }
+  }
+}

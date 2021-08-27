@@ -2,6 +2,16 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
     
+    let triggerTabList = [].slice.call(document.querySelectorAll('#tech button'))
+    triggerTabList.forEach(function (triggerEl) {
+        let tabTrigger = new bootstrap.Tab(triggerEl)
+        
+        triggerEl.addEventListener('click', function (event) {
+            event.preventDefault()
+            tabTrigger.show()
+        })
+    })
+    
     const sliderTeam = new Swiper(".team", {
         slidesPerView: 3,
         spaceBetween: 30,

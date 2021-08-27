@@ -1,0 +1,125 @@
+---
+layout: default
+title: Технологии
+---
+<div class="layout">
+{{> header }}
+<div class="content">
+  <div class="container">
+    <ul class="breadcrumb">
+      <li><a href="#">Главная</a></li>
+      <li>Технологии    </li>
+    </ul>
+  </div>
+  <div class="container">
+    <h1>Технологии</h1>
+    <ul class="nav tech__nav nav-tabs tech" id="tech" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tech-one-tab" data-bs-toggle="tab" data-bs-target="#one-tab" type="button" role="tab" aria-controls="one-tab" aria-selected="true">
+          Хранение и обработка больших данных
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tech-two-tab" data-bs-toggle="tab" data-bs-target="#two-tab" type="button" role="tab" aria-controls="two-tab" aria-selected="false">
+          Управление эффективностью маркетинговых кампаний
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tech-three-tab" data-bs-toggle="tab" data-bs-target="#three-tab" type="button" role="tab" aria-controls="three-tab" aria-selected="false">
+          Customer Experience
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tech-four-tab" data-bs-toggle="tab" data-bs-target="#four-tab" type="button" role="tab" aria-controls="four-tab" aria-selected="false">
+          Цифровизация бизнес-процессов
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tech-five-tab" data-bs-toggle="tab" data-bs-target="#five-tab" type="button" role="tab" aria-controls="five-tab" aria-selected="false">
+          Data Mesh
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content tech__tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="one-tab" role="tabpanel" aria-labelledby="tech-one-tab">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="tech__img">
+              <img src="dist/images/tech-1.svg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="tech__heading">Хранение и обработка больших данных</h2>
+            <div class="tech__description">
+              Решения на основе Big Data и Machine Learning для создания аналитических моделей по
+              прогнозированию спроса, организации высоконагруженных систем по обработке данных и
+              расчету бизнес-показателей в режиме real-time.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="two-tab" role="tabpanel" aria-labelledby="tech-two-tab">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="tech__img">
+              <img src="dist/images/tech-2.svg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="tech__heading">Управление эффективностью маркетинговых кампаний</h2>
+            <div class="tech__description">
+              Сервисы по управлению эффективностью маркетингового плана и проведения рекламных кампаний. Оценка качества исполнения и прогнозирование, как та или иная активность повлияет на план продаж, количество потенциальных клиентов.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="three-tab" role="tabpanel" aria-labelledby="tech-three-tab">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="tech__img">
+              <img src="dist/images/tech-3.svg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="tech__heading">Customer Experience</h2>
+            <div class="tech__description">
+              Best practice для управления клиентским опытом и передовые методы и решения для отслеживания клиентского пути. Мониторинг действий потребителя с момента возникновения потребности и до завершения коммуникаций с торговой сетью/банком или транспортной компанией. Оценка его удовлетворенности качеством обслуживания.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="four-tab" role="tabpanel" aria-labelledby="tech-four-tab">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="tech__img">
+              <img src="dist/images/tech-4.svg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="tech__heading">Цифровизация бизнес-процессов</h2>
+            <div class="tech__description">
+              Технологии и собственные решения для прогнозирования изменений и гармонизации бизнес-процессов предприятия, оценки их влияния на достижение максимальной экономической эффективности.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="five-tab" role="tabpanel" aria-labelledby="tech-five-tab">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="tech__img">
+              <img src="dist/images/tech-5.svg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="tech__heading">Data Mesh</h2>
+            <div class="tech__description">
+              Услуги и решения по управлению качеством данных на основе подхода Data Mesh, который призван сначала выстроить процесс работы с данными, и только потом применять те или иные инструменты для реализации (Data Lake, Управление данными и другие).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{> footer }}
+</div>
