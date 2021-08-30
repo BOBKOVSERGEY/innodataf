@@ -95,3 +95,80 @@
 
   }
 }
+.projects-page-item {
+  position: relative;
+  background: white;
+  padding: 0 100px 60px 60px;
+  box-shadow: 0 4px 40px rgba(65, 105, 177, 0.05);
+  border-radius: 10px;
+  min-height: 270px;
+  z-index: 1;
+  transition: background .3s ease-in-out;
+  margin-bottom: 50px;
+  & h2 {
+    font-family: $fontBold;
+    font-size: 3rem;
+    margin-top: 30px;
+    @media only screen and (max-width:480px) {
+      font-size: 2.5rem;
+    }
+    & a {
+      color: $colorPrimary;
+      transition: color .3s ease-in-out;
+      &:hover {
+        color: white;
+      }
+      &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        pointer-events: auto;
+        content: "";
+      }
+    }
+  }
+  &__img {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //right: 100px;
+    //top: 0;
+    //background: linear-gradient(62deg, #4B79CE 11.21%, #426AB3 59.3%, #2B4A81 128.49%);
+    margin-left: auto;
+    background: white;
+    box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
+
+    @media only screen and (max-width:992px) {
+      margin: 0 auto;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 135px;
+      height: 86px;
+      right: -20px;
+      top: -20px;
+      transition: all 1s ease-in-out;
+      background: url("../images/solution-page-item-bg.svg") no-repeat center;
+      z-index: -1;
+    }
+    & img {
+      width: 60px;
+    }
+  }
+  &:hover {
+    background: $colorBlue;
+  }
+  &:hover &__img::before{
+
+    right: -30px;
+    top: -40px;
+  }
+}

@@ -48,5 +48,35 @@
         margin-bottom: 30px;
       }
     }
+    &_bg-left {
+      position: relative;
+      //overflow: hidden;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 50vw;
+        min-height:2000px;
+        height: 100%;
+        background: url(../images/bg-left-next.svg) no-repeat left top;
+        z-index: -1;
+      }
+    }
+    &_bg-left-small {
+      position: relative;
+      //overflow: hidden;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 50vw;
+        min-height:1000px;
+        height: 100%;
+        background: url(../images/bg-left-small.svg) no-repeat left top;
+        z-index: -1;
+      }
+    }
   }
 }
