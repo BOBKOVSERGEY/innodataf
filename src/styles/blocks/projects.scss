@@ -105,6 +105,9 @@
   z-index: 1;
   transition: background .3s ease-in-out;
   margin-bottom: 50px;
+  @media only screen and (max-width:480px) {
+    padding: 0 20px 60px 20px;
+  }
   & h2 {
     font-family: $fontBold;
     font-size: 3rem;
@@ -145,7 +148,7 @@
     background: white;
     box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
 
-    @media only screen and (max-width:992px) {
+    @media only screen and (max-width:480px) {
       margin: 0 auto;
     }
     &:before {

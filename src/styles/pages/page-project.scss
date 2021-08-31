@@ -1,0 +1,286 @@
+.project-page {
+
+  &-first-section {
+    position: relative;
+    min-height: 800px;
+    z-index: 1;
+    & h1 {
+      max-width: 70%;
+      @media only screen and (max-width:992px) {
+        max-width: unset;
+        width: 100%;
+      }
+    }
+    & ul {
+      margin: 50px 0;
+      position: relative;
+      &:before {
+        content: "";
+        width: 3px;
+        height: 80%;
+        border-left: 2px dashed $colorSecondary;
+        left: 29px;
+        top: 50%;
+        position: absolute;
+        transform: translate(0, -50%);
+        @media only screen and (max-width:1400px) {
+          height: 73%;
+        }
+        @media only screen and (max-width:375px) {
+          transform: translate(0, -45%);
+        }
+      }
+      & li {
+        font-family: $fontBold;
+        padding-left: 75px;
+        position: relative;
+        margin-bottom: 45px;
+        font-size: 2.5rem;
+        color: $colorPrimary;
+        @media only screen and (max-width:480px) {
+          font-size: 2rem;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 1px solid $colorSecondary;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          left: 10px;
+          top: 50%;
+          transform: translate(0, -50%);
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: $colorSecondary;
+        }
+        &:first-child {
+          &:before {
+            width: 60px;
+            height: 60px;
+          }
+          &:after {
+            width: 30px;
+            height: 30px;
+            left: 15px;
+          }
+        }
+        &:not(:first-child) {
+          &:before {
+            left: 10px;
+          }
+          &:after {
+            left: 20px;
+          }
+        }
+      }
+    }
+    &__img {
+      position: absolute;
+      width: 860px;
+      height: 859px;
+      top:0;
+      right: -100px;
+      z-index: -1;
+      @media only screen and (max-width:1500px) {
+        right: 0;
+      }
+      @media only screen and (max-width:1200px) {
+        top: unset;
+        bottom: 0;
+        width: 720px;
+        height: 719px;
+      }
+      @media only screen and (max-width:992px) {
+        opacity: .8;
+      }
+      @media only screen and (max-width:768px) {
+        width: 520px;
+        height: 519px;
+      }
+      @media only screen and (max-width:480px) {
+        width: 320px;
+        height: 319px;
+        right: unset;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      @media only screen and (max-width:375px) {
+        width: 300px;
+        height: 299px;
+      }
+
+    }
+    &__logo-at {
+      position: absolute;
+      width: 227px;
+      height: 62px;
+      top:15px;
+      right: 0;
+      z-index: -1;
+      @media only screen and (max-width:992px) {
+        display: none;
+      }
+    }
+  }
+  &-background {
+    padding: 120px 0;
+    background-color: #F0F1F1;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  }
+  &-uniqueness {
+    padding: 120px 0;
+    background-color: #eee;
+    position: relative;
+    & h2 {
+      position: relative;
+      z-index: 2;
+    }
+
+    & ul {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      & li {
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 25px;
+        z-index: 2;
+        &:before {
+          content: '';
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          background: #ED6F00;
+          position: absolute;
+          left: 0;
+          top: 10px;
+        }
+      }
+    }
+    &__img-wrap {
+      position: absolute;
+      overflow: hidden;
+      top:-100px;
+      right: 0;
+      width: 759px;
+      height: 836px;
+      z-index: 1;
+      @media only screen and (max-width:768px) {
+        display: none;
+      }
+    }
+    &__img {
+      position: absolute;
+      width: 759px;
+      height: 836px;
+      background: url(../images/bg-unique.svg) no-repeat center;
+      right: -150px;
+      top: -17px;
+
+    }
+  }
+  &-customer-value {
+    padding-top: 50px;
+    background-image: linear-gradient(#eee 50%, #fff 50%);
+    &__wrap {
+      background: #FFFFFF;
+      box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
+      border-radius: 10px;
+      padding: 60px 100px;
+      @media only screen and (max-width: 375px) {
+        padding: 30px 15px;
+      }
+    }
+    & ul {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      & li {
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 25px;
+        z-index: 2;
+        &:before {
+          content: '';
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          background: #ED6F00;
+          position: absolute;
+          left: 0;
+          top: 10px;
+        }
+      }
+    }
+    & h3 {
+      margin: 30px 0;
+      color: $colorPrimary;
+    }
+  }
+  &-objectives {
+    padding-top: 120px;
+
+    &__wrap {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 66%;
+        height: 3px;
+        border-bottom: 2px dashed rgba(#61626A, .4);
+        left: 30px;
+        top: 20px;
+      }
+    }
+    &__item {
+      padding-top: 100px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 10px solid #F0F1F1;
+        background: $colorSecondary;
+      }
+      &_center {
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 10px solid #F0F1F1;
+          background: white;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: -2px;
+          left: 40px;
+          width: 73px;
+          height: 38px;
+          background: url(../images/plane-project.svg) no-repeat center;
+        }
+      }
+      &> .active {
+        background: #FFFFFF;
+        box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
+        border-radius: 10px;
+        padding: 15px;
+      }
+    }
+  }
+}

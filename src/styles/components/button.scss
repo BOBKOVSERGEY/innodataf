@@ -54,6 +54,17 @@
     &:hover {
       background: #F47920;
     }
+    &_orange {
+      border: 1px solid $colorSecondary;
+      color: $colorSecondary;
+      transition: all .3s ease-in-out;
+      @media only screen and (max-width:375px) {
+        font-size: 1.3rem;
+      }
+      &:hover {
+        color: white;
+      }
+    }
   }
   &-all {
     color: $colorBlue;

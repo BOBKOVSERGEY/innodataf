@@ -1,0 +1,86 @@
+---
+layout: default
+title: Контакты
+---
+<div class="layout">
+{{> header }}
+<div class="content">
+  <div class="container">
+    <ul class="breadcrumb">
+      <li><a href="#">Главная</a></li>
+      <li>Контакты</li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="heading-section-wrap">
+      <h1>Контакты</h1> <a href="support.html" class="btn btn-border btn-border_orange">Связаться с техподдержкой</a>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="contacts-page__info">
+          <div class="contacts-page__info-icon">
+            <img src="dist/images/contacts-page-phone.svg" alt="">
+          </div>
+          <div class="contacts-page__info-content">
+            <h3>Наши контакты</h3>
+            <p>
+              <a href="tel:+78432456404">8 (843) 245-64-04</a>
+            </p>
+              <p>
+                <a href="//innodata.ru">www.innodata.ru</a><br>
+                <a href="mailto:+78432456404">info@innodata.ru</a><br>
+              <a href="https://www.facebook.com/Innodataru/">Facebook Innodataru</a><br>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="contacts-page__info">
+          <div class="contacts-page__info-icon">
+            <img src="dist/images/contacts-page-map-marker.svg" alt="">
+          </div>
+          <div class="contacts-page__info-content">
+            <h3>Ревизиты компании</h3>
+            <p>
+              420500, Республика Татарстан, г. Иннополис, ул Университетская,<br> д. 7, офис 220</p>
+              <p>ООО «Иннодата»<br>
+              ОГРН: 1171690052930<br>
+              ИНН/КПП: 1615013510/161501001
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <section class="contacts-page__map">
+    <div class="rd-google-map">
+      <div id="google-map" data-zoom="17" data-x="37.6508341" data-y="55.7208871" class="rd-google-map__model"></div>
+      <div class="rd-google-map__locations">
+        <ul>
+          <li>
+            <h5>ООО «Иннодата»</h5>
+            <address class="contact-info">
+              <p>420500, Республика Татарстан, г. Иннополис,<br> ул Университетская, д. 7, офис 220</p>
+              <br>
+              <dl>
+                <dd><a href="tel:+78432456404"> 8 (843) 245-64-04</a></dd>
+              </dl>
+              <dl>
+                <dd><a href="mailto:info@innodata.ru">info@innodata.ru</a></dd>
+              </dl>
+              <dl>
+                <dd><span>Время работы:<br>
+                С понедельника по четверг с 09:00 до 18:00;<br>
+                в пятницу с 09:00 до 17:00.</span></dd>
+              </dl>
+            </address>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+</div>
+{{> footer }}
+</div>

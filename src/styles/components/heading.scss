@@ -4,6 +4,10 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1;
+  &_thin {
+    font-weight: normal;
+    margin-bottom: 40px;
+  }
   @media only screen and (max-width:1400px) {
     font-size: 5rem;
   }
@@ -22,5 +26,15 @@
       flex-direction: column;
       align-items: flex-start;
     }
+    &>h1 {
+      margin-bottom: 0!important;
+    }
+    & .btn-border_orange {
+      margin-left: auto;
+      @media only screen and (max-width:992px) {
+        margin: 30px auto 0 auto;
+      }
+    }
   }
+
 }

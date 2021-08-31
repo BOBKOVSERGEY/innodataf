@@ -1,6 +1,61 @@
 // enable strict mode
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
+    let elMap = document.querySelector('#google-map');
+    if (elMap) {
+        let map;
+        const popupInfoMap = document.querySelector('.rd-google-map__locations').innerHTML;
+        let InfoObj = [];
+        let centerCords = {
+            lat:55.7518373,
+            lng:48.7522174
+        };
+        const icons = {
+            info: {
+                icon: "dist/images/map-marker.svg",
+            },
+        };
+        const markersOnMap = [
+            {   popupInfo: popupInfoMap,
+                LatLng: [
+                    {
+                        lat:centerCords.lat,
+                        lng:centerCords.lng
+                    }
+                ],
+                type: 'info'
+            }
+        ];
+    
+        function addMarkerInfo() {
+            markersOnMap.forEach(item => {
+                const marker = new google.maps.Marker({
+                    position:item.LatLng[0],
+                    icon: icons[item.type].icon,
+                    map: map
+                });
+            
+                const infowindow = new google.maps.InfoWindow({
+                    content: item.popupInfo
+                });
+            
+                marker.addListener('click', function () {
+                    infowindow.open(map, marker)
+                })
+            })
+        }
+        function initMap() {
+            map = new google.maps.Map(elMap, {
+                zoom: 17,
+                center: centerCords,
+                scrollwheel: !1,
+            
+            });
+            addMarkerInfo();
+        }
+        initMap();
+    
+    }
     
     let triggerTabList = [].slice.call(document.querySelectorAll('#tech button'))
     triggerTabList.forEach(function (triggerEl) {
