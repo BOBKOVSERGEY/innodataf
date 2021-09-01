@@ -37,6 +37,14 @@
         font-size: 2.9rem;
       }
     }
+    & h3 {
+        font-family: $fontBold;
+        margin-top:-30px;
+        margin-bottom:30px;
+        color: $colorPrimary;
+        max-width: 700px;
+        text-align: center;
+    }
     &-bg {
       @media only screen and (max-width: 992px) {
         display: none;
