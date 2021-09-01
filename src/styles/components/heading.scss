@@ -8,6 +8,12 @@
     font-weight: normal;
     margin-bottom: 40px;
   }
+  &_average {
+    font-family: $fontBold;
+    font-size: 4.5rem;
+    text-transform: unset;
+    margin-bottom: 60px;
+  }
   @media only screen and (max-width:1400px) {
     font-size: 5rem;
   }
