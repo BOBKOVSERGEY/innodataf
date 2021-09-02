@@ -57,7 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     }
     
-    let triggerTabList = [].slice.call(document.querySelectorAll('#tech button'))
+    let triggerTabList = [].slice.call(
+        document.querySelectorAll('#tech button'),
+        document.querySelectorAll('#completed-projects button'),
+    )
     triggerTabList.forEach(function (triggerEl) {
         let tabTrigger = new bootstrap.Tab(triggerEl)
         

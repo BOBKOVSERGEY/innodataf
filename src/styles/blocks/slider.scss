@@ -18,6 +18,14 @@
   }
   & .container {
     position: relative;
+    & p {
+      @media only screen and (max-width:768px) {
+        background-color: rgba(white, .4);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 40px rgba(65, 105, 177, 0.05);
+      }
+    }
     &:before {
       content: '';
       position: absolute;
@@ -35,25 +43,25 @@
         right: -300px;
       }
       @media only screen and (max-width:992px) {
-        top: 71px;
-        right: -190px;
+        top: 12px;
+        right: -245px;
 
         width: 600px;
         height: 435px;
       }
       @media only screen and (max-width:768px) {
-        top: -8px;
-        right: -136px;
+        top: 65px;
+        right: 0;
         width: 400px;
         height: 290px;
-        opacity: .3;
+        opacity: 1;
       }
       @media only screen and (max-width:480px) {
-        top: 86px;
-        right: -82px;
+        top: 138px;
+        right: -54px;
         width: 400px;
         height: 290px;
-        opacity: .3;
+
       }
     }
     &:after {
@@ -67,8 +75,8 @@
       z-index: -1;
       background: url("../images/shape.svg") no-repeat center;
       @media only screen and (max-width:768px) {
-        left: -15px;
-        top: -230px;
+        left: -184px;
+        top: -221px;
         width: 510px;
         height: 418px;
       }
@@ -88,14 +96,21 @@
     padding-top: 110px;
     padding-bottom: 280px;
     overflow: hidden;
+    @media only screen and (max-width:1200px) {
+      padding-top: 50px;
+      min-height: 100%;
+      //padding-bottom: 150px;
+      //clip-path: polygon(50% 0%, 100% 0, 100% 70%, 70% 100%, 0 85%, 0 0);
+    }
     @media only screen and (max-width:992px) {
       padding-top: 30px;
       min-height: 100%;
       padding-bottom: 150px;
+      clip-path: polygon(50% 0%, 100% 0, 100% 70%, 70% 100%, 0 85%, 0 0);
     }
     @media only screen and (max-width:480px) {
       clip-path: polygon(50% 0%, 100% 0, 100% 90%, 70% 100%, 0 90%, 0 0);
-      padding-bottom: 60px;
+      //padding-bottom: 150px;
     }
     &:before {
       content: '';
@@ -107,7 +122,9 @@
       background-image: linear-gradient(to right bottom, transparent 65%, #426AB3 59.3%, #2B4A81 128.49%);
       z-index: -1;
       @media only screen and (max-width:480px) {
-        background-image: unset;
+        background-image: linear-gradient(154deg, transparent 73%, #426AB3 59.3%, #2B4A81 128.49%);
+        //padding-bottom: 150px;
+
       }
     }
     /*&:after {

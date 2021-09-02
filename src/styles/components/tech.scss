@@ -80,6 +80,9 @@
       padding: 50px;
       background: radial-gradient(88.77% 152.06% at 31.33% -63.77%, #4C74BC 0%, #83A7E8 31%, #174497 100%);
       border-radius: 20px;
+      @media (max-width: 480px) {
+        padding: 50px 20px;
+      }
     }
   }
   &__heading {
@@ -91,6 +94,9 @@
     }
     @media (max-width: 992px) {
       font-size:3.2rem;
+    }
+    @media (max-width: 480px) {
+      font-size:2.5rem;
     }
   }
   &__img {

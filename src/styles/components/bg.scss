@@ -43,3 +43,15 @@
     fill: #fff;
   }
 }
+
+.bg-svg-bottom-light-blue {
+  width: 100%;
+  position: relative;
+  bottom: -1px;
+  margin-top: 60px;
+  & svg {
+    width: 100%;
+    display: block;
+    fill: #CCD4E2;
+  }
+}
