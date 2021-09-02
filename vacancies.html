@@ -15,7 +15,7 @@
     <meta name="theme-color" content="#003982">
     <title>Вакансии</title>
 </head>
-<body id="top">
+<body class="preload" id="top">
 <!-- Preloader -->
 <div id="preloader" class="light">
     <div class="outer">
@@ -117,7 +117,7 @@
             <i class="navbar-search__icon"></i>
           </div>
           <div class="navbar-btn">
-            <button class="btn btn_navbar">Связаться с нами</button>
+            <button data-modal="#popup4" class="btn btn_navbar btn__vacancy popup-link">Связаться с нами</button>
           </div>
         </nav>
       </div>
@@ -344,6 +344,51 @@
       </div>
     </footer></div>
     
+    <div id="popup4" class="popup">
+    <div class="popup__dialog">
+        <div class="popup__content  popup__content_xl popup__content_slide-3dflip-horizontal">
+            <h4 class="popup__title">Свяжитесь с нами по интересующему вас вопросу</h4>
+            <div class="content">
+                <form action="" class="vacancy-item__form" method="post" enctype="multipart/form-data">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputFio" placeholder="ФИО*">
+                        <label for="floatingInputFio">ФИО*</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingPosition" placeholder="Должность">
+                        <label for="floatingPosition">Должность</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingCompany" placeholder="Компания">
+                        <label for="floatingCompany">Компания*</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="E-mail">
+                        <label for="floatingEmail">E-mail*</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingPhone" placeholder="Телефон">
+                        <label for="floatingPhone">Телефон</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Запрос*</label>
+                    </div>
+                    <div class="popup__required-fields">* обязательное поле</div>
+                    <div class="popup__agreement">
+                        <input id="vacancy-policy" type="checkbox" class="js-policy-vacancy" checked>
+                        <label for="vacancy-policy">Согласен с <a href="#" target="_blank">условиями</a>  обработки персональных данных</label>
+                    </div>
+
+                    <div class="popup__btn">
+                        <button class="btn" name="submit" type="submit">Отправить запрос</button>
+                    </div>
+                </form>
+            </div>
+            <div class="popup__close"><i class="popup__close-icon"></i></div>
+        </div>
+    </div>
+</div>
     <script src="dist/js/lib.js?v=1.0.0"></script>
     <script type='text/javascript' src='//maps.google.com/maps/api/js?key=AIzaSyAbF547wmpRHA68yKJP62H7yha2Nzsilm8&#038;language=ru'></script>
     <script src="dist/js/main.js?v=1.0.0"></script>
