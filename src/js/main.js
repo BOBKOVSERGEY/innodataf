@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         initMap();
     
     }
-    
+    /*
     let triggerTabList = [].slice.call(
         document.querySelectorAll('#tech button'),
         document.querySelectorAll('#completed-projects button'),
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tabTrigger.show()
         })
     })
-    
+    */
     const sliderTeam = new Swiper(".team", {
         slidesPerView: 3,
         spaceBetween: 30,

@@ -81,8 +81,8 @@
       font-size: 1.6rem;
     }
     &:hover &__img img {
-      transition: 3s all ease-in-out;
-      transform: scale(1.2);
+      transition: 1s all ease-in-out;
+      transform: scale(1.2) rotate(4deg);
     }
   }
 }
