@@ -178,6 +178,28 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         }
     });
+    let swiperAnimation = new SwiperAnimation();
+    const mainSlider = new Swiper('.slider-main', {
+      
+        //loop: true,
+        speed: 1000,
+        autoplay: {
+            delay: 8000,
+        },
+        on: {
+            init: function () {
+                swiperAnimation.init(this).animate();
+            },
+            slideChange: function () {
+                swiperAnimation.init(this).animate();
+            }
+        },
+        /*effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },*/
+    
+    });
     /*
     * slidesPerView: 3,
         spaceBetween: 30,

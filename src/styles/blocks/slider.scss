@@ -74,6 +74,10 @@
       //transform: translate(0, -50%);
       z-index: -1;
       background: url("../images/shape.svg") no-repeat center;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-name: breadcrumb_shape_1;
       @media only screen and (max-width:768px) {
         left: -184px;
         top: -221px;
