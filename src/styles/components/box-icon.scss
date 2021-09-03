@@ -12,6 +12,11 @@
     padding: 90px 20px 40px 20px;
     min-height:unset;
   }
+  & h3 {
+    font-family: $fontBold;
+    color: $colorPrimary;
+
+  }
   &__img {
     position: absolute;
     width: 110px;

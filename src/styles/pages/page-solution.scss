@@ -41,6 +41,7 @@
       position: relative;
       @media only screen and (max-width:480px) {
         padding: 60px 20px;
+        margin-top: 10px;
       }
       & ul {
         margin-top: 30px;
@@ -553,6 +554,13 @@
     background-image: linear-gradient(157deg, #eee 50%, #fff 50%);
   }
   &-competencies {
+    &_our {
+      padding-top: 100px;
+      & .page-solution-competencies__item {
+        text-align: center;
+        color: $colorPrimary;
+      }
+    }
     &__item {
       background: #FFFFFF;
       /* тень оранжевая */
@@ -589,6 +597,338 @@
       }
     }
 
+  }
+  &-example-creation {
+    padding-top: 100px;
+    &__img {
+      text-align: center;
+      & img {
+        max-width: 980px;
+        margin: 50px 0;
+      }
+    }
+  }
+  &-foundation {
+    padding: 120px 0;
+    background-color: #eee;
+    position: relative;
+    @media only screen and (max-width:768px) {
+      padding: 120px 0 0 0;
+    }
+    & h2 {
+      position: relative;
+      z-index: 2;
+    }
+    &__description {
+      font-family: $fontBold;
+      position: relative;
+      z-index: 2;
+      font-size: 2.5rem;
+      color: $colorPrimary;
+      max-width: 70%;
+      @media only screen and (max-width:768px) {
+        max-width: unset;
+
+      }
+      @media only screen and (max-width:480px) {
+        font-size: 2rem;
+      }
+    }
+    & ul {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      & li {
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 25px;
+        z-index: 2;
+        &:before {
+          content: '';
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          background: #ED6F00;
+          position: absolute;
+          left: 0;
+          top: 10px;
+        }
+      }
+    }
+    &__img-wrap {
+      position: absolute;
+      overflow: hidden;
+      top:-100px;
+      right: 0;
+      width: 759px;
+      height: 836px;
+      z-index: 1;
+      @media only screen and (max-width:768px) {
+        display: none;
+      }
+    }
+    &__img {
+      position: absolute;
+      width: 759px;
+      height: 836px;
+      background: url(../images/bg-unique.svg) no-repeat center;
+      right: -150px;
+      top: -17px;
+
+    }
+  }
+  &-recommendation {
+    padding-top: 100px;
+
+    & .box-icon {
+      min-height: 325px;
+      @media only screen and (max-width:768px) {
+        min-height: unset;
+      }
+    }
+  }
+  &-criteria {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(157deg, #eee 50%, #fff 50%);
+    &__item {
+      background: #FFFFFF;
+      box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 30px;
+      min-height: 350px;
+    }
+    & ul {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      & li {
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 25px;
+        &:before {
+          content: '';
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          background: #ED6F00;
+          position: absolute;
+          left: 0;
+          top: 10px;
+        }
+      }
+    }
+    & h3 {
+      font-family: $fontBold;
+      color: $colorPrimary;
+      font-size: 2.5rem;
+      @media only screen and (max-width:480px) {
+        font-size: 2rem;
+      }
+    }
+  }
+  &-typical-areas {
+    &__item {
+      background: #FFFFFF;
+      /* тень оранжевая */
+
+      box-shadow: 0px 4px 40px rgba(170, 133, 104, 0.1);
+      border-radius: 10px;
+      padding: 40px 75px;
+      position: relative;
+      min-height: 240px;
+      margin-bottom: 30px;
+      transition: box-shadow .4s ease-in-out;
+      text-align: center;
+      @media only screen and (max-width:768px) {
+        min-height: unset;
+      }
+      @media only screen and (max-width:480px) {
+        padding: 75px 20px;
+      }
+      & h3 {
+        font-family: $fontBold;
+      }
+
+      &-num {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 100px;
+        color: $colorSecondary;
+        opacity: .1;
+        line-height: 1;
+        transition: opacity .4s ease-in-out;
+      }
+      &:hover {
+        box-shadow: 0 4px 40px rgba(170, 133, 104, 0.3);
+      }
+      &:hover &-num {
+        opacity: .5;
+      }
+    }
+  }
+  &-directions {
+    padding-top: 100px;
+  }
+  &-strategic-planning {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  &-tactical-planing {
+    &__wrap {
+      background: #FFFFFF;
+      box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
+      border-radius: 10px;
+      padding: 60px 100px;
+      margin-bottom: 50px;
+      @media only screen and (max-width:768px) {
+        padding: 60px 20px;
+      }
+      @media only screen and (max-width: 375px) {
+        padding: 30px 15px;
+      }
+      & h2 {
+        margin-bottom: 40px;
+      }
+      & h3 {
+        font-family: $fontBold;
+        color: $colorPrimary;
+      }
+    }
+    & ul {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      & li {
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 25px;
+        z-index: 2;
+        &:before {
+          content: '';
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          background: #ED6F00;
+          position: absolute;
+          left: 0;
+          top: 10px;
+        }
+      }
+    }
+  }
+  &-operational-replanning {
+    padding-top: 100px;
+
+    background-image: linear-gradient(0deg,#fff 55%,#eee 59.3%,#eee 128.49%);
+    //background-image: linear-gradient(#eee 50%,#fff 50%);
+    & .tab-content {
+      & h3 {
+        margin: 30px 0;
+        color: $colorPrimary;
+      }
+      & ul {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        & li {
+          position: relative;
+          margin-bottom: 20px;
+          padding-left: 25px;
+          &:before {
+            content: '';
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #ED6F00;
+            position: absolute;
+            left: 0;
+            top: 10px;
+          }
+        }
+      }
+    }
+    &__anons {
+      font-family: $fontBold;
+      color: $colorPrimary;
+      margin-bottom: 30px;
+    }
+  }
+  &-advantages-our {
+    background-color: #eee;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    & h2 {
+      position: relative;
+      z-index: 3;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 796px;
+      height: 878px;
+      background: url("../images/bg-tech-cap.svg") no-repeat center;
+      left: -50px;
+      top:-100px;
+      @media only screen and (max-width:992px) {
+        width: 700px;
+        height: 832px;
+      }
+      @media only screen and (max-width:768px) {
+        width: 500px;
+        height: 594px;
+      }
+      @media only screen and (max-width:480px) {
+        top: 30px;
+        width: 270px;
+        height: 321px;
+      }
+    }
+    & ul {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      & li {
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 25px;
+        z-index: 2;
+        &:before {
+          content: '';
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          background: #ED6F00;
+          position: absolute;
+          left: 0;
+          top: 10px;
+        }
+      }
+    }
+  }
+  &-our-partners {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    &__wrap {
+      padding: 90px 0;
+      background: #eee;
+    }
+    &__img {
+      text-align: center;
+      @media only screen and (max-width:992px) {
+        margin-bottom: 30px;
+      }
+      & img {
+
+        filter: grayscale(100%);
+        opacity: .55;
+        max-width: 200px;
+        transition: filter .4s ease-in-out, opacity .4s ease-in-out;
+      }
+
+      &:hover img{
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+    }
   }
 }
 .completed-projects {
