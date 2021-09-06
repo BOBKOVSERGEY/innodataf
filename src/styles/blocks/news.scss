@@ -141,6 +141,15 @@
         }
       }
     }
+    &__img {
+      margin: 15px 0;
+      & img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
     &__img-main {
       position: relative;
 

@@ -28,7 +28,7 @@ title: Специалист Data Scientist на проект в авиакомп
         <svg viewBox="0 0 20.75 19.19"><path  d="M691.09,378H673.91a.77.77,0,0,0-.78.78v12.5a.77.77,0,0,0,.78.78h17.18a.78.78,0,0,0,.79-.78v-12.5A.78.78,0,0,0,691.09,378Z" transform="translate(-672.13 -373.91)"/><path d="M686.41,378v-1.56a1.59,1.59,0,0,0-.46-1.11,1.57,1.57,0,0,0-1.11-.45h-4.68a1.57,1.57,0,0,0-1.11.45,1.59,1.59,0,0,0-.46,1.11V378" transform="translate(-672.13 -373.91)"/></svg>
         <span>Опыт работы: от 3 до 6 лет</span>
       </div>
-      <button class="btn">Откликнуться</button>
+      <button data-modal="#popup5" class="btn popup-link">Откликнуться</button>
     </div>
     <div class="vacancies-item__anons vacancies-item__anons_full">
       Открыта вакансия на должность разработчика ETL. Кандидат будет заниматься развитием функционала ETL/DWH на различных проектах компании, создавать и дорабатывать ETL-процессы загрузки, трансформации данных и формирования витрин. Необходим опыт участия в проектах создания и развития хранилищ данных.
@@ -50,7 +50,7 @@ title: Специалист Data Scientist на проект в авиакомп
         <li>опыт администрирoвaния oперaциoнных систем семействa Unix и Windows;</li>
         <li>знание английского языка на уровне чтения технической документации, приветствуется разговорный навык общения.</li>
       </ul>
-      <h3>Приемущества работы у нас:</h3>
+      <h3>Преимущества работы у нас:</h3>
       <ul>
         <li>работа в молодой и амбициозной команде;</li>
         <li>участие в новых интересных проектах;</li>
@@ -58,10 +58,66 @@ title: Специалист Data Scientist на проект в авиакомп
       </ul>
     </div>
     <div class="content__bottom-block">
-      <button class="btn">Откликнуться</button>
+      <button data-modal="#popup5" class="btn popup-link">Откликнуться</button>
       <a href="#" class="btn-all">Смотреть другие вакансии</a>
     </div>
   </div>
 </div>
+  <div id="popup5" class="popup">
+    <div class="popup__dialog">
+      <div class="popup__content  popup__content_xxl popup__content_slide-3dflip-horizontal">
+        <h4 class="popup__title">Специалист Data Scientist на проект в авиакомпанию</h4>
+        <div class="content">
+          <form action="" class="vacancy-item__form" method="post" enctype="multipart/form-data">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="resumeInputFio" placeholder="ФИО*">
+              <label for="resumeInputFio">ФИО*</label>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="resumeEmail" placeholder="E-mail">
+                  <label for="resumeEmail">E-mail*</label>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="resumePhone" placeholder="Телефон">
+                  <label for="resumePhone">Телефон*</label>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="resumeLink" placeholder="Телефон">
+                  <label for="resumeLink">Ссылка на резюме*</label>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="form-field-file">
+                  <input type="file" class="form-control inputFile" id="resumeFile" >
+                  <label for="resumeFile"><i></i> <span>Или прикрепить файл</span></label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Leave a comment here" id="resumeTextarea"></textarea>
+              <label for="resumeTextarea">Ваш комментарий</label>
+            </div>
+            <div class="popup__required-fields">* обязательное поле</div>
+            <div class="popup__agreement">
+              <input id="vacancy-policy" type="checkbox" class="js-policy" checked>
+              <label for="vacancy-policy">Согласен с <a href="#" target="_blank">условиями</a>  обработки персональных данных</label>
+            </div>
+
+            <div class="popup__btn">
+              <button class="btn" name="submit" type="submit">Откликнуться</button>
+            </div>
+          </form>
+        </div>
+        <div class="popup__close"><i class="popup__close-icon"></i></div>
+      </div>
+    </div>
+  </div>
 {{> footer }}
 </div>

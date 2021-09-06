@@ -1,6 +1,55 @@
 // enable strict mode
 'use strict';
+
 document.addEventListener('DOMContentLoaded', () => {
+    /**check policy **/
+    const checkboxesPolicy = document.querySelectorAll('.js-policy');
+    if(checkboxesPolicy) {
+        checkboxesPolicy.forEach(item => {
+            item.addEventListener('click', function () {
+                const isChecked = item.checked;
+                //console.log();
+                let btnSend = item.parentNode.nextElementSibling.childNodes[1];
+    
+                if (!isChecked) {
+                    if(btnSend) {
+                        btnSend.setAttribute("disabled", "disabled");
+                    }
+                    
+                } else {
+                    if(btnSend) {
+                        btnSend.removeAttribute("disabled");
+                    }
+                    
+                }
+            })
+        })
+    }
+    /**end check policy**/
+    /**form input type file**/
+    let inputs = document.querySelectorAll( '.inputFile' );
+    Array.prototype.forEach.call( inputs, function( input )
+    {
+        let label	 = input.nextElementSibling,
+            labelVal = label.innerHTML;
+        
+        input.addEventListener( 'change', function( e )
+        {
+            let fileName = '';
+            if( this.files && this.files.length > 1 )
+                fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+            else
+                fileName = e.target.value.split( '\\' ).pop();
+            
+            if( fileName )
+                label.querySelector( 'span' ).innerHTML = fileName;
+            else
+                label.innerHTML = labelVal;
+        });
+    });
+    
+    /**end form input type file**/
+    
     let elMap = document.querySelector('#google-map');
     if (elMap) {
         let map;

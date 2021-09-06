@@ -126,9 +126,10 @@
   }
   &__title {
     font-family: $fontBold;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     color: $colorPrimary;
     margin-bottom: 20px;
+    max-width: 88%;
     @media (max-width: 992px) {
       font-size: 3.2rem;
     }
@@ -163,7 +164,7 @@
   width: 100%;
   max-width: 430px;
   border-radius: 0;
-  padding: 6rem;
+  padding: 3rem 6rem;
   overflow: hidden;
   background-color: #fff;
   margin: 0.5rem;
@@ -197,7 +198,7 @@
 
   }
   @media (max-width: 992px) {
-    padding: 6rem 2rem;
+    padding: 2rem 2rem;
   }
   @media (min-width: 576px) {
     margin: 1.75rem auto;

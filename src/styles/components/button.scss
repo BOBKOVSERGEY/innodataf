@@ -116,3 +116,9 @@
   }
 
 }
+
+.btn:disabled {
+  cursor: not-allowed;
+  background-image: linear-gradient(to right,#999 0,#777 100%);
+  filter: blur(2px);
+}

@@ -190,3 +190,28 @@ textarea.form-control-lg {
   height: 1.5em;
   border-radius: 0.25rem;
 }
+.form-field-file {
+  & input[type=file] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+  }
+  & label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: -5px;
+    & i {
+      width: 32px;
+      height: 32px;
+      background: url("../images/input-file.svg") no-repeat center;
+      margin: 15px;
+      display: inline-block;
+    }
+  }
+}
+.form-field {
+  position: relative;
+
+}
