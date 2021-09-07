@@ -1,0 +1,29 @@
+.page-404 {
+  padding-top: 70px;
+  & h1 {
+    font-family: $fontBold;
+    font-size: 9rem;
+    color: $colorPrimary;
+    margin-bottom: 50px;
+    text-transform: unset!important;
+  }
+  &__anons {
+    margin-bottom: 50px;
+    font-family: $fontBold;
+    color: $colorPrimary;
+    font-size: 2.5rem;
+      @media (max-width: 480px) {
+        font-size: 2rem;
+      }
+  }
+  &__img {
+    @media (max-width: 992px) {
+     margin-top: 30px;
+    }
+  }
+  & a {
+    &:hover {
+      color: white;
+    }
+  }
+}

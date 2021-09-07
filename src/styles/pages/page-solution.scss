@@ -161,6 +161,10 @@
     background-color: #eee;
     padding-top: 100px;
     position: relative;
+    & p {
+      position: relative;
+      z-index: 3;
+    }
     & h2 {
       position: relative;
       z-index: 3;
