@@ -2,6 +2,151 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
+    
+    //console.log(document.querySelector(".form").elements.fio);
+    /*form validation*/
+    class FormValidator {
+
+        #error = 0;
+        
+        constructor(form, fields) {
+            this.form = form
+            this.fields = fields
+        }
+        
+        initialize() {
+            this.validateOnEntry()
+            this.validateOnSubmit()
+        }
+    
+        /*async getPosts() {
+            try {
+                const res = await fetch('/products/index');
+                let posts = await res.json();
+            
+                posts.forEach(item => {
+                    renderItem(item)
+                });
+            } catch (error) {
+                console.log(error);
+                alert('Something went wrong :(');
+            }
+        }*/
+        
+        validateOnSubmit() {
+            let self = this
+            
+            this.form.addEventListener('submit', e => {
+                e.preventDefault()
+                this.#error = 0;
+                self.fields.forEach(field => {
+                    const input = this.form.elements[field];
+                    if(input) {
+                        self.validateFields(input)
+                    }
+                    
+                })
+                
+                let formData = new FormData(this.form);
+                console.log(formData);
+                if (this.#error === 0) {
+                    let response = fetch('/send-letter.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                        .then(response => response.json())
+                        .then(result => {
+                            console.log(result.message)
+                        })
+                    
+                }
+               
+               
+            })
+        }
+        
+        validateOnEntry() {
+            let self = this
+            this.fields.forEach(field => {
+                const input = this.form.elements[field]
+                if(input) {
+                    input.addEventListener('input', event => {
+                        self.validateFields(input)
+                    })
+                }
+                
+            })
+        }
+        
+        validateFields(field) {
+            // Check presence of values
+            if (field.value.trim() === "") {
+                this.setStatus(field, `${field.nextElementSibling.innerText} не может быть пустым`, "error")
+                this.#error++;
+            } else if (field.type === "email") {
+                const re = /\S+@\S+\.\S+/
+                if (re.test(field.value)) {
+                    this.setStatus(field, null, "success")
+                } else {
+                    this.setStatus(field, "Введите корректный email", "error")
+                    this.#error++;
+                }
+            } else {
+                this.setStatus(field, null, "success")
+                
+            }
+          
+           
+            // Password confirmation edge case
+            /*if (field.id === "password_confirmation") {
+                const passwordField = this.form.querySelector('#password')
+                
+                if (field.value.trim() == "") {
+                    this.setStatus(field, "Password confirmation required", "error")
+                } else if (field.value != passwordField.value)  {
+                    this.setStatus(field, "Password does not match", "error")
+                } else {
+                    this.setStatus(field, null, "success")
+                }
+            }*/
+        }
+        
+        setStatus(field, message, status) {
+            const successIcon = field.parentElement.querySelector('.icon-success')
+            const errorIcon = field.parentElement.querySelector('.icon-error')
+            const errorMessage = field.parentElement.querySelector('.error-message')
+            
+            if (status === "success") {
+                if (errorIcon) { errorIcon.classList.add('hidden') }
+                if (errorMessage) { errorMessage.innerText = "" }
+                successIcon.classList.remove('hidden')
+                field.classList.remove('input-error')
+            }
+            
+            if (status === "error") {
+                if (successIcon) { successIcon.classList.add('hidden') }
+                field.parentElement.querySelector('.error-message').innerText = message
+                errorIcon.classList.remove('hidden')
+                field.classList.add('input-error')
+            }
+        }
+    }
+    
+    const formOne = document.querySelector('#formOne')
+    const fieldsFormOne = [
+        "fio",
+        "email",
+        "company",
+        "comment"
+    ]
+    if(formOne) {
+        const validatorOneForm = new FormValidator(formOne, fieldsFormOne);
+        validatorOneForm.initialize();
+    }
+    
+    
+    
+    /*end form validation*/
     /**check policy **/
     const checkboxesPolicy = document.querySelectorAll('.js-policy');
     if(checkboxesPolicy) {

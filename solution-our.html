@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="dist/css/main.css?v=16.0.0">
+    <link rel="stylesheet" href="dist/css/main.css?v=17.0.0">
     <link rel="preload" href="dist/fonts/OpenSans/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="dist/fonts/OpenSans/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="dist/fonts/OpenSans/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
@@ -507,30 +507,58 @@
         <div class="popup__content  popup__content_xl popup__content_slide-3dflip-horizontal">
             <h4 class="popup__title">Свяжитесь с нами по интересующему вас вопросу</h4>
             <div class="content">
-                <form action="" class="vacancy-item__form" method="post" enctype="multipart/form-data">
+                <form action="" id="formOne"  method="post" enctype="multipart/form-data">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingInputFio" placeholder="ФИО*">
+                        <input type="text" class="form-control" id="floatingInputFio" name="fio" placeholder="ФИО*">
                         <label for="floatingInputFio">ФИО*</label>
+                        <span class="error-message"></span>
+                        <svg class="form__icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <svg class="form__icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                        </svg>
                     </div>
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingPosition" placeholder="Должность">
+                        <input type="text" class="form-control" id="floatingPosition" name="position" placeholder="Должность">
                         <label for="floatingPosition">Должность</label>
                     </div>
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingCompany" placeholder="Компания">
+                        <input type="text" class="form-control" id="floatingCompany" name="company" placeholder="Компания">
                         <label for="floatingCompany">Компания*</label>
+                        <span class="error-message"></span>
+                        <svg class="form__icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <svg class="form__icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                        </svg>
                     </div>
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="floatingEmail" placeholder="E-mail">
+                        <input type="email" class="form-control" id="floatingEmail" name="email" placeholder="E-mail">
                         <label for="floatingEmail">E-mail*</label>
+                        <span class="error-message"></span>
+                        <svg class="form__icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <svg class="form__icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                        </svg>
                     </div>
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingPhone" placeholder="Телефон">
+                        <input type="text" class="form-control" id="floatingPhone" name="phone" placeholder="Телефон">
                         <label for="floatingPhone">Телефон</label>
                     </div>
                     <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                        <textarea class="form-control" placeholder="Leave a comment here" name="comment" id="floatingTextarea"></textarea>
                         <label for="floatingTextarea">Запрос*</label>
+                        <span class="error-message"></span>
+                        <svg class="form__icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <svg class="form__icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                        </svg>
                     </div>
                     <div class="popup__required-fields">* обязательное поле</div>
                     <div class="popup__agreement">
@@ -697,8 +725,8 @@
         </div>
     </div>
 </div>
-    <script src="dist/js/lib.js?v=4.0.0"></script>
+    <script src="dist/js/lib.js?v=5.0.0"></script>
     <script type='text/javascript' src='//maps.google.com/maps/api/js?key=AIzaSyAbF547wmpRHA68yKJP62H7yha2Nzsilm8&#038;language=ru'></script>
-    <script src="dist/js/main.js?v=4.0.0"></script>
+    <script src="dist/js/main.js?v=5.0.0"></script>
 </body>
 </html>
