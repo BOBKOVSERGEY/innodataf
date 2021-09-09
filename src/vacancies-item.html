@@ -68,40 +68,69 @@ title: Специалист Data Scientist на проект в авиакомп
       <div class="popup__content  popup__content_xxl popup__content_slide-3dflip-horizontal">
         <h4 class="popup__title">Специалист Data Scientist на проект в авиакомпанию</h4>
         <div class="content">
-          <form action="" class="vacancy-item__form" method="post" enctype="multipart/form-data">
+          <form action="" id="formFive" class="vacancy-item__form" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="vacancy" value="">
             <div class="form-floating">
-              <input type="text" class="form-control" id="resumeInputFio" placeholder="ФИО*">
+              <input type="text" class="form-control" name="fio" id="resumeInputFio" placeholder="ФИО*">
               <label for="resumeInputFio">ФИО*</label>
+              <span class="error-message"></span>
+              <svg class="form__icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <svg class="form__icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+              </svg>
             </div>
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-floating">
-                  <input type="email" class="form-control" id="resumeEmail" placeholder="E-mail">
+                  <input type="email" class="form-control" name="email" id="resumeEmail" placeholder="E-mail">
                   <label for="resumeEmail">E-mail*</label>
+                  <span class="error-message"></span>
+                  <svg class="form__icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <svg class="form__icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                  </svg>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="resumePhone" placeholder="Телефон">
+                  <input type="text" class="form-control" name="phone" id="resumePhone" placeholder="Телефон">
                   <label for="resumePhone">Телефон*</label>
+                  <span class="error-message"></span>
+                  <svg class="form__icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <svg class="form__icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                  </svg>
                 </div>
               </div>
               <div class="col-lg-7">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="resumeLink" placeholder="Телефон">
+                  <input type="text" class="form-control" name="link" id="resumeLink" placeholder="Ссылка">
                   <label for="resumeLink">Ссылка на резюме*</label>
+                  <span class="error-message"></span>
+                  <svg class="form__icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <svg class="form__icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                  </svg>
                 </div>
               </div>
               <div class="col-lg-5">
                 <div class="form-field-file">
-                  <input type="file" class="form-control inputFile" id="resumeFile" >
+                  <input type="file" name="file" class="form-control inputFile" id="resumeFile" >
                   <label for="resumeFile"><i></i> <span>Или прикрепить файл</span></label>
                 </div>
               </div>
             </div>
 
             <div class="form-floating">
-              <textarea class="form-control" placeholder="Leave a comment here" id="resumeTextarea"></textarea>
+              <textarea class="form-control" name="comment" placeholder="Leave a comment here" id="resumeTextarea"></textarea>
               <label for="resumeTextarea">Ваш комментарий</label>
             </div>
             <div class="popup__required-fields">* обязательное поле</div>

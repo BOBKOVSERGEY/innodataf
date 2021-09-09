@@ -5,6 +5,9 @@ $company = trim($_POST['company']);
 $email = trim($_POST['email']);
 $phone = trim($_POST['phone']);
 $comment = trim($_POST['comment']);
+$link = trim($_POST['link']);
+$file = $_FILES['file']['tmp_name'];
+$fileName = $_FILES['file']['name'];
 
 
 $data = [
@@ -14,6 +17,9 @@ $data = [
     $email,
     $phone,
     $comment,
+    $file,
+    $fileName,
+    $link,
 ];
 $message = 'Сообщение успешно отправлено';
 $response = ['message' => $data];

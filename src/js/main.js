@@ -143,6 +143,54 @@ document.addEventListener('DOMContentLoaded', () => {
         const validatorOneForm = new FormValidator(formOne, fieldsFormOne);
         validatorOneForm.initialize();
     }
+    const formTwo = document.querySelector('#formTwo')
+    const fieldsFormTwo = [
+        "fio",
+        "email",
+        "company",
+        "comment"
+    ]
+    if(formTwo) {
+        const validatorTwoForm = new FormValidator(formTwo, fieldsFormTwo);
+        validatorTwoForm.initialize();
+    }
+    const formThree = document.querySelector('#formThree')
+    const fieldsFormThree = [
+        "fio",
+        "field_activity",
+        "email",
+        "company",
+        "comment",
+    ]
+    if(formThree) {
+        const validatorThreeForm = new FormValidator(formThree, fieldsFormThree);
+        validatorThreeForm.initialize();
+    }
+    
+    const formFour = document.querySelector('#formFour')
+    const fieldsFormFour = [
+        "fio",
+        "email",
+        "link",
+        "phone",
+    ]
+    if(formFour) {
+        const validatorFourForm = new FormValidator(formFour, fieldsFormFour);
+        validatorFourForm.initialize();
+    }
+    
+    const formFive = document.querySelector('#formFive')
+    const fieldsFormFive = [
+        "fio",
+        "email",
+        "link",
+        "phone",
+    ]
+    if(formFive) {
+        const validatorFiveForm = new FormValidator(formFive, fieldsFormFive);
+        validatorFiveForm.initialize();
+    }
+    
     
     
     
@@ -638,6 +686,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     /** end modal**/
+    
+    /* header search*/
+    const btnSearch = document.querySelector('.navbar-search__icon');
+    const formSearch = document.querySelector('.navbar-search__form');
+    const btnSearchClose = document.querySelector('.navbar-search__close');
+    if(btnSearch) {
+        btnSearch.addEventListener('click', function () {
+            formSearch.classList.add('open');
+        })
+        body.addEventListener('click', function (e) {
+            if (!e.target.closest('.navbar-search')) {
+                formSearch.classList.remove('open');
+            }
+        })
+        btnSearchClose.addEventListener('click', function () {
+            formSearch.classList.remove('open');
+        })
+    }
+    
+   
+    
+    /*end header search*/
     
     
 });
