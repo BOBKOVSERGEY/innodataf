@@ -18,6 +18,9 @@
   text-transform: uppercase;
   z-index: 1;
   transition: background .3s ease-in-out;
+  &_point-none {
+    pointer-events: none;
+  }
   &_navbar {
     @media only screen and (max-width: 1400px) {
       padding: 20px 10px;

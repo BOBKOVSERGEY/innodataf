@@ -46,17 +46,39 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     
                 })
-                
+    
+    
                 let formData = new FormData(this.form);
-                console.log(formData);
                 if (this.#error === 0) {
+                    const btnFormUploadFile = this.form.parentElement.querySelector('.form__upload-file');
+                    const btnFormSend = this.form.parentElement.querySelector('.btn');
+                    const popupActive = document.querySelector('.popup.popup-open');
+                    const popupSuccess = document.querySelector('#successSend');
+                    btnFormSend.classList.add('btn_point-none');
                     let response = fetch('/send-letter.php', {
                         method: 'POST',
                         body: formData
                     })
-                        .then(response => response.json())
+                        .then(response => {
+                            console.log(response)
+                            response.json()
+                        })
                         .then(result => {
-                            console.log(result.message)
+                            
+                            if(btnFormUploadFile) {
+                                btnFormUploadFile.innerHTML = 'Или прикрепить файл';
+                            }
+                            this.form.reset();
+                            btnFormSend.classList.remove('btn_point-none');
+                            setTimeout(function () {
+                                popupOpen(popupSuccess);
+                            }, 1000);
+                            
+                        })
+                        .catch(err => {
+                            console.error(err);
+                            console.log('wrong');
+                            btnFormSend.classList.remove('btn_point-none');
                         })
                     
                 }

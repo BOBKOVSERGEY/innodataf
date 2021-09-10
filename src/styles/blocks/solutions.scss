@@ -23,6 +23,7 @@
       z-index: 2;
       margin-top: 15px;
       margin-bottom: 30px;
+
       &:before {
         content: '';
         position: absolute;
@@ -33,6 +34,7 @@
         transform: translate(0, -50%);
         background: url("../images/bg-solution.svg") no-repeat center;
         z-index: -1;
+        transition: transform .8s ease-in-out;
       }
       & img {
 
@@ -66,7 +68,10 @@
     &:hover {
       background: $colorBlue;
     }
-
+    /*&:hover &__icon:before{
+      transform: translateY(-5px);
+    }
+*/
   }
 
 }
