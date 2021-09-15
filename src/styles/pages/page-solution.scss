@@ -39,6 +39,10 @@
       border-radius: 20px;
       padding: 60px;
       position: relative;
+      @media only screen and (max-width:1400px) {
+        padding: 30px 60px;
+        margin-top: 10px;
+      }
       @media only screen and (max-width:480px) {
         padding: 60px 20px;
         margin-top: 10px;
@@ -46,6 +50,10 @@
       & ul {
         margin-top: 30px;
         margin-bottom: 50px;
+        @media only screen and (max-width:1400px) {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
         & li {
           position: relative;
           margin-bottom: 20px;
@@ -82,7 +90,9 @@
       &-description {
         margin: 40px 0;
         font-family: $fontBold;
-        //font-size: 2.5rem;
+        @media only screen and (max-width:1400px) {
+          margin: 20px 0;
+        }
       }
       & h3 {
         font-family: $fontBold;

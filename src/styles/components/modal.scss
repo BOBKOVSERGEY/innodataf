@@ -164,7 +164,7 @@
   width: 100%;
   max-width: 430px;
   border-radius: 0;
-  padding: 3rem 6rem;
+  padding: 3rem;
   overflow: hidden;
   background-color: #fff;
   margin: 0.5rem;
@@ -205,6 +205,7 @@
   }
   //opacity: 0;
   &_xl {
+    padding: 3rem 6rem;
     @media (min-width: 992px) {
       max-width: 800px;
     }
@@ -214,6 +215,7 @@
     }
   }
   &_xxl {
+    padding: 3rem 6rem;
     @media (min-width: 992px) {
       max-width: 800px;
     }

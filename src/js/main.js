@@ -263,7 +263,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
+    
     /**end form input type file**/
+    const siteTemplatePath = '/local/templates/innodata/';
     
     let elMap = document.querySelector('#google-map');
     if (elMap) {
@@ -276,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         const icons = {
             info: {
-                icon: "dist/images/map-marker.svg",
+                icon: siteTemplatePath + "dist/images/map-marker.svg",
             },
         };
         const markersOnMap = [
@@ -334,6 +336,15 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
     */
+    
+    /*bx-panel*/
+    const bxPanel = document.querySelector('body #bx-panel');
+    const header = document.querySelector('.header');
+    if(bxPanel) {
+        header.style.top = '40' + 'px';
+    }
+   
+    /*end bx panel*/
     const sliderTeam = new Swiper(".team", {
         slidesPerView: 3,
         spaceBetween: 30,

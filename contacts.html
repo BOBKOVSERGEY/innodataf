@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="dist/css/main.css?v=19.0.0">
+    <link rel="stylesheet" href="dist/css/main.css?v=20.0.0">
     <link rel="preload" href="dist/fonts/OpenSans/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="dist/fonts/OpenSans/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="dist/fonts/OpenSans/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
@@ -23,7 +23,7 @@
 </head>
 <body class="preload" id="top">
 <!-- Preloader -->
-<div id="preloader" class="light">
+    <div id="preloader" class="light">
     <div class="outer">
         <!-- Google Chrome -->
         <div class="infinityChrome">
@@ -88,8 +88,26 @@
             <li>
               <a href="tech.html">Технологии</a>
             </li>
-            <li>
+            <li class="navbar__nav-dropdown">
               <a href="projects.html">Проекты</a>
+              <i class="navbar__nav-dropdown-chevron"></i>
+              <ul class="navbar__nav-dropdown-menu  navbar__nav-dropdown-menu_big expandable">
+                <li class="navbar__nav-dropdown-item">
+                  <a href="project-item-spge.html">Система прогнозирования грузопочтовых емкостей</a>
+                </li>
+                <li class="navbar__nav-dropdown-item">
+                  <a href="project-item-skoo.html">Система контроля операционных ограничений</a>
+                </li>
+                <li class="navbar__nav-dropdown-item">
+                  <a href="project-item-dsk.html">Динамическая сегментация клиентов авиакомпании</a>
+                </li>
+                <li class="navbar__nav-dropdown-item">
+                  <a href="project-item.html">Сквозная аналитика для ПАО «Аэрофлот»</a>
+                </li>
+                <li class="navbar__nav-dropdown-item">
+                  <a href="project-item-umk.html">Управление маркетинговыми кампаниями</a>
+                </li>
+              </ul>
             </li>
             <li class="navbar__nav-dropdown">
               <a href="solutions.html">Решения</a>
@@ -182,7 +200,7 @@
                 <img src="dist/images/contacts-page-map-marker.svg" alt="">
               </div>
               <div class="contacts-page__info-content">
-                <h3>Ревизиты компании</h3>
+                <h3>Реквизиты компании</h3>
                 <p>
                   420500, Республика Татарстан, г. Иннополис, ул. Университетская,<br> д. 7, офис 220</p>
                   <p>ООО «Иннодата»<br>
