@@ -20,16 +20,28 @@
     &__info {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
+
+      @media only screen and (max-width:480px) {
+        justify-content: center;
+        flex-direction: column;
+      }
       &-type {
         background: rgba(#F0F1F1, .4);
         color: $colorBlue;
         padding: 7px 30px;
         border-radius: 30px;
         margin-right: 50px;
+        min-width: 200px;
+        text-align: center;
+        @media only screen and (max-width:480px) {
+          margin-right: 0;
+        }
       }
       &-date {
         color: #BDBEC5;
+        @media only screen and (max-width:480px) {
+          margin-top: 15px;
+        }
       }
     }
     &__heading {
@@ -62,6 +74,12 @@
     }
   }
   &-detail {
+    &__anons {
+      margin: 50px 0;
+      @media only screen and (min-width:768px) {
+        font-size: 2.5rem;
+      }
+    }
     & p>em {
       padding-left: 30px;
       padding-top: 15px;
@@ -111,14 +129,19 @@
         left: 30px;
         bottom: 20px;
       }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
       &-type {
         background: rgba(#F0F1F1, 1);
         color: $colorBlue;
         padding: 7px 30px;
         border-radius: 30px;
-        margin-right: 50px;
       }
       &-date {
+        //margin-top: 15px;
         color: #fff;
       }
       &-shape {
