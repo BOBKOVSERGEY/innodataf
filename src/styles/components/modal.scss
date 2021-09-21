@@ -213,6 +213,9 @@
     @media (min-width: 1200px) {
       max-width: 910px;
     }
+    @media (max-width: 992px) {
+      padding: 2rem 2rem;
+    }
   }
   &_xxl {
     padding: 3rem 6rem;
@@ -222,6 +225,9 @@
 
     @media (min-width: 1200px) {
       max-width: 1140px;
+    }
+    @media (max-width: 992px) {
+      padding: 2rem 2rem;
     }
   }
 }

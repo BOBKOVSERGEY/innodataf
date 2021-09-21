@@ -742,5 +742,71 @@ document.addEventListener('DOMContentLoaded', () => {
     
     /*end header search*/
     
+    /**load more*/
+   
+    
+    /*const height = Math.max(
+    document.body.scrollHeight, document.documentElement.scrollHeight,
+    document.body.offsetHeight, document.documentElement.offsetHeight,
+    document.body.clientHeight, document.documentElement.clientHeight
+    );*/
+    let load_more = false;
+    function getPage() {
+        return document.querySelector('body #ajax_next_page');
+    }
+    window.addEventListener('scroll', function () {
+        let btn =  getPage();
+        if(btn && !load_more) {
+            let  url = btn.getAttribute('href');
+            let offset_button = btn.offsetTop;
+            if(window.pageYOffset >= offset_button - window.screen.height) {
+                load_more = true;
+                let id_product = 'Y';
+                let data_body = "IS_AJAX=" + id_product;
+                fetch(
+                    url, {
+                    method: "POST",
+                    body: data_body,
+                    headers:{"content-type": "application/x-www-form-urlencoded"}
+                }).then(response =>{
+                    //console.log(response);
+                    response.text().then(text => {
+                        btn.insertAdjacentHTML('beforebegin',text);
+                        btn.remove();
+                        load_more = false;
+                    })
+                })
+            }
+        }
+    })
+    /*window.addEventListener('scroll', function () {
+        if(ajax_next_page && !load_more) {
+            let  url = ajax_next_page.getAttribute('href');
+            let offset_button = ajax_next_page.offsetTop;
+            if(window.pageYOffset >= offset_button - window.screen.height) {
+                console.log('++')
+                load_more = true;
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json;charset=utf-8'
+                    },
+                    body: "inputs=" + JSON.stringify({IS_AJAX: 'Y'}),
+                    
+                }).then(response =>{
+                    //console.log(response);
+                    
+                    response.text().then(text => {
+                        // console.log(text);
+                        ajax_next_page.insertAdjacentHTML('beforebegin',text);
+                        //ajax_next_page.remove();
+                        load_more = false;
+                    })
+                })
+            }
+        }
+    })*/
+    /**end load more*/
+    
     
 });
