@@ -126,12 +126,12 @@
   }
   &__title {
     font-family: $fontBold;
-    font-size: 3.5rem;
+    font-size: 3.3rem;
     color: $colorPrimary;
     margin-bottom: 20px;
     max-width: 88%;
     @media (max-width: 992px) {
-      font-size: 3.2rem;
+      font-size: 2.5rem;
     }
   }
   &__overlay {
@@ -238,7 +238,7 @@
 .popup__close {
   position: absolute;
   right: 70px;
-  top: 34px;
+  top: 30px;
   width: 50px;
   height: 55px;
   display: flex;

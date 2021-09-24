@@ -108,4 +108,85 @@
       margin-bottom: 30px;
     }
   }
+  &-solution {
+    margin-top: 50px;
+    & h3 {
+      font-family: $fontBold;
+      font-size: 2.5rem;
+      color: white;
+      margin-bottom: 50px;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 30px;
+      & a {
+        color: white;
+        padding-right: 70px;
+        position: relative;
+        transition: color .3s ease-in-out;
+        &:hover {
+          color: #bdbec5;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: 52px;
+          height: 52px;
+          border: 1px solid white;
+          transform: translate(0 ,-50%);
+          border-radius: 50%;
+          background-image: url(../images/btn-all.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 23px 30px;
+          z-index: 2;
+          transition: color .3s ease-in-out;
+        }
+
+      }
+      &-img {
+          position: relative;
+          width: 50px;
+          height: 50px;
+          padding: 10px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 20px;
+          //background: linear-gradient(62deg, #4B79CE 11.21%, #426AB3 59.3%, #2B4A81 128.49%);
+          background: white;
+          box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
+          flex: 0 0 auto;
+          &:before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 38px;
+            right: -10px;
+            top: -10px;
+            transition: all 1s ease-in-out;
+            background: url("../images/solution-page-item-bg.svg") no-repeat center;
+            z-index: -1;
+          }
+          & img {
+            width: 60px;
+          }
+      }
+      &:hover &-img::before{
+
+        right: -15px;
+        top: -15px;
+      }
+      &:hover a::before{
+        opacity: .75;
+      }
+    }
+  }
 }

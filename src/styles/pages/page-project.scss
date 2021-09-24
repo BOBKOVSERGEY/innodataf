@@ -23,7 +23,7 @@
       }
     }
 
-    & ul {
+    &__list {
       margin: 50px 0;
       position: relative;
       &:before {
@@ -42,7 +42,59 @@
           transform: translate(0, -45%);
         }
       }
+      &_four {
+        &:before {
+          content: "";
+          width: 3px;
+          height: 75%;
+          border-left: 2px dashed $colorSecondary;
+          left: 29px;
+          top: 50%;
+          position: absolute;
+          transform: translate(0, -50%);
+          @media only screen and (max-width:1400px) {
+            height: 68%;
+          }
+          @media only screen and (max-width:375px) {
+            transform: translate(0, -45%);
+          }
 
+        }
+      }
+      &_two {
+        &:before {
+          content: "";
+          width: 3px;
+          height: 60%;
+          border-left: 2px dashed $colorSecondary;
+          left: 29px;
+          top: 50%;
+          position: absolute;
+          transform: translate(0, -50%);
+          @media only screen and (max-width:1400px) {
+            height: 59%;
+          }
+          @media only screen and (max-width:375px) {
+            transform: translate(0, -45%);
+          }
+        }
+      }
+      &_three {
+        &:before {
+          content: "";
+          width: 3px;
+          height: 75%;
+          border-left: 2px dashed $colorSecondary;
+          left: 29px;
+          top: 25px;
+          position: absolute;
+          transform: unset;
+          @media only screen and (max-width:1400px) {
+            height: 76%;
+          }
+
+        }
+      }
       & li {
         font-family: $fontBold;
         padding-left: 75px;
@@ -96,72 +148,15 @@
         }
       }
     }
-    &_two-list {
-      ul {
-        &:before {
-          content: "";
-          width: 3px;
-          height: 60%;
-          border-left: 2px dashed $colorSecondary;
-          left: 29px;
-          top: 50%;
-          position: absolute;
-          transform: translate(0, -50%);
-          @media only screen and (max-width:1400px) {
-            height: 59%;
-          }
-          @media only screen and (max-width:375px) {
-            transform: translate(0, -45%);
-          }
-        }
-      }
-    }
-    &_three-list {
-      ul {
-        &:before {
-          content: "";
-          width: 3px;
-          height: 75%;
-          border-left: 2px dashed $colorSecondary;
-          left: 29px;
-          top: 25px;
-          position: absolute;
-          transform: unset;
-          @media only screen and (max-width:1400px) {
-            height: 76%;
-          }
 
-        }
-      }
-    }
-    &_four-list {
-      ul {
-        &:before {
-          content: "";
-          width: 3px;
-          height: 75%;
-          border-left: 2px dashed $colorSecondary;
-          left: 29px;
-          top: 50%;
-          position: absolute;
-          transform: translate(0, -50%);
-          @media only screen and (max-width:1400px) {
-            height: 68%;
-          }
-          @media only screen and (max-width:375px) {
-            transform: translate(0, -45%);
-          }
 
-        }
-      }
-    }
     &__img {
       position: absolute;
       width: 860px;
       height: 859px;
       top:0;
       right: -100px;
-      z-index: -1;
+      z-index: -2;
       @media only screen and (max-width:1500px) {
         right: 0;
       }
@@ -188,6 +183,7 @@
         right: unset;
         left: 50%;
         transform: translate(-50%, 0);
+        opacity: .5;
       }
       @media only screen and (max-width:375px) {
         width: 300px;

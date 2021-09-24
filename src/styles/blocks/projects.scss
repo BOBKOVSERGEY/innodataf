@@ -101,10 +101,13 @@
   padding: 0 100px 60px 60px;
   box-shadow: 0 4px 40px rgba(65, 105, 177, 0.05);
   border-radius: 10px;
-  min-height: 270px;
+  min-height: 350px;
   z-index: 1;
   transition: background .3s ease-in-out;
   margin-bottom: 50px;
+  @media only screen and (max-width:1400px) {
+    min-height: 270px;
+  }
   @media only screen and (max-width:480px) {
     padding: 0 20px 60px 20px;
   }

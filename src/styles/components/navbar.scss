@@ -183,7 +183,7 @@
     width: 215px;
     flex: 0 0 auto;
     @media only screen and (max-width: 1400px) {
-      margin-right: 0;
+      margin-right: 10px;
     }
     @media only screen and (max-width:1200px) {
       width: 170px;
@@ -329,8 +329,8 @@
       display: flex;
       align-items: center;
       @media only screen and (max-width: 1400px) {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
       }
       @media only screen and (max-width:1200px) {
         padding-left: 0;
