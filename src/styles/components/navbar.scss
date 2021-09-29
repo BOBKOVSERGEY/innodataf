@@ -11,6 +11,26 @@
     @media only screen and (max-width:1200px) {
       display: none;
     }
+    &-mobile {
+      margin-right: 10px;
+      & i {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url("../images/send-letter.svg") no-repeat center;
+        cursor: pointer;
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity .3s  ease-in-out;
+        @media only screen and (max-width:375px) {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      @media only screen and (min-width:1200px) {
+        display: none;
+      }
+    }
   }
   &__burger {
     width: 40px;
@@ -61,6 +81,9 @@
     }
     @media only screen and (min-width:1200px) {
       display: none;
+    }
+    @media only screen and (max-width:375px) {
+      width: 30px;
     }
     &.active i {
       background-color: transparent;
@@ -189,6 +212,9 @@
       width: 170px;
       margin-top: -14.5px;
     }
+    @media only screen and (max-width:375px) {
+      width: 160px;
+    }
     & img {
 
     }
@@ -214,6 +240,10 @@
       @media only screen and (max-width:1200px) {
         width: 25px;
         height: 25px;
+      }
+      @media only screen and (max-width:375px) {
+        width: 20px;
+        height: 20px;
       }
       &:hover {
         opacity: .75;
@@ -291,6 +321,7 @@
         width: 24px;
         height: 24px;
       }
+
     }
   }
   &__nav {

@@ -1,0 +1,50 @@
+.lazyImage {
+  position:relative;
+  display:inline-block;
+  width:100%;
+  height:0;
+  overflow:hidden;
+  vertical-align:bottom;
+}
+
+.lazyImage img {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity:1;
+  transform:scale(1);
+  transition:background 0.5s, opacity 0.5s, transform 0.5s;
+}
+
+.lazyImageError img,
+.lazyImageWaiting img {
+  opacity:0;
+  transform:scale(0);
+  transition:none;
+}
+
+.lazyImageError:after {
+  content:"Image Not Found";
+  box-sizing:border-box;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:1em;
+  background:#FF4;
+  color:#F00;
+  border:0.5em dashed #F00;
+  transform:scale(0);
+  transition:transform 0.5s;
+}
+
+.lazyImageErrorShow:after {
+  transform:scale(1);
+}

@@ -59,12 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         method: 'POST',
                         body: formData
                     })
-                        .then(response => {
-                            console.log(response)
-                            response.json()
-                        })
+                        .then(response => response.json())
                         .then(result => {
-                            
+                            console.log(result);
                             if(btnFormUploadFile) {
                                 btnFormUploadFile.innerHTML = 'Или прикрепить файл';
                             }
@@ -73,6 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             setTimeout(function () {
                                 popupOpen(popupSuccess);
                             }, 1000);
+                            
+                            
                             
                         })
                         .catch(err => {
@@ -808,5 +807,34 @@ document.addEventListener('DOMContentLoaded', () => {
     })*/
     /**end load more*/
     
+    /**
+     * lazy loading img
+     */
+    if ('loading' in HTMLImageElement.prototype) {
+        
+        let lazyImages = document.querySelectorAll('.lazyImage img');
+        
+        for (let img of lazyImages) {
+            if (!img.complete) {
+                img.parentNode.classList.add('lazyImageWaiting');
+                img.addEventListener('load', lazyImageLoad, false);
+                img.addEventListener('error', lazyImageError, false);
+            }
+        }
+        
+        function lazyImageLoad(e) {
+            e.currentTarget.parentNode.classList.remove('lazyImageWaiting');
+        }
+        
+        function lazyImageError(e) {
+            let parent = e.currentTarget.parentNode;
+            parent.classList.remove('lazyImageWaiting');
+            parent.classList.add('lazyImageError');
+            setTimeout(function() {
+                parent.classList.add('lazyImageErrorShow');
+            }, 60);
+        }
+        
+    } // if 'loading' supported
     
 });

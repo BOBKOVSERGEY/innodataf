@@ -22,6 +22,6 @@ $data = [
     $link,
 ];
 $message = 'Сообщение успешно отправлено';
-$response = ['message' => $data];
+$response = $data;
 header('Content-type: application/json');
 echo json_encode($response);
