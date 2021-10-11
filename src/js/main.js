@@ -178,7 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const formThree = document.querySelector('#formThree')
     const fieldsFormThree = [
         "fio",
-        "field_activity",
         "email",
         "company",
         "comment",
