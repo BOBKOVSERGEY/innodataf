@@ -100,9 +100,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         validateFields(field) {
+            
             // Check presence of values
             if (field.value.trim() === "") {
-                this.setStatus(field, `${field.nextElementSibling.innerText} не может быть пустым`, "error")
+                if(this.form.dataset.language === 'en') {
+                    this.setStatus(field, `${field.nextElementSibling.innerText} cannot be blank`, "error")
+                } else {
+                    this.setStatus(field, `${field.nextElementSibling.innerText} не может быть пустым`, "error")
+                }
+                
                 this.#error++;
             } else if (field.type === "email") {
                 const re = /\S+@\S+\.\S+/
