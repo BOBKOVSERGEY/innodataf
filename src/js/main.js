@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fieldsFormFour = [
         "fio",
         "email",
-        "link",
+        //"link",
         "phone",
     ]
     if(formFour) {
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fieldsFormFive = [
         "fio",
         "email",
-        "link",
+        //"link",
         "phone",
     ]
     if(formFive) {

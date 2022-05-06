@@ -1,0 +1,101 @@
+.page-solution {
+  &__scheme {
+    display: flex;
+    align-items: center;
+    @media only screen and (max-width:992px) {
+      flex-direction: column;
+    }
+    &-img {
+      max-width: 500px;
+      width: 100%;
+      @media only screen and (max-width:992px) {
+        margin-bottom: 30px;
+      }
+    }
+    &-module {
+      position: relative;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 40px rgba(65, 105, 177, 0.15);
+      min-height: 220px;
+      transition: all .3s ease-in-out;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      &_1 {
+        &:before {
+          content: '';
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          background: url("../images/cds-module-1.svg") no-repeat center;
+          right: 25px;
+          top: 50%;
+          transform: translate(0, -50%);
+          z-index: -1;
+        }
+      }
+      &_2 {
+        &:before {
+          content: '';
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          background: url("../images/cds-module-2.svg") no-repeat center;
+          right: 25px;
+          top: 50%;
+          transform: translate(0, -50%);
+          z-index: -1;
+        }
+      }
+      &_3 {
+        &:before {
+          content: '';
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          background: url("../images/cds-module-3.svg") no-repeat center;
+          right: 25px;
+          top: 50%;
+          transform: translate(0, -50%);
+          z-index: -1;
+        }
+      }
+      &-description {
+        font-size: 1.7rem;
+        color: $colorPrimary;
+        font-family: $fontBold;
+        margin-bottom: 15px;
+      }
+      & h2 {
+        font-size: 2rem;
+        color: $colorPrimary;
+        font-family: $fontBold;
+        margin-bottom: 15px;
+      }
+      &:hover {
+        transform: translate(5px, -5px);
+      }
+      & ul {
+        //margin-top: 30px;
+       // margin-bottom: 50px;
+        & li {
+          position: relative;
+          margin-bottom: 15px;
+          padding-left: 25px;
+          z-index: 2;
+          &:before {
+            content: '';
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            border: 1px solid #ED6F00;
+            position: absolute;
+            left: 0;
+            top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
