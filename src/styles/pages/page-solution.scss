@@ -629,6 +629,7 @@
         color: $colorPrimary;
       }
     }
+
     &__item {
       background: #FFFFFF;
       /* тень оранжевая */
@@ -662,6 +663,12 @@
       }
       &:hover &-num {
         opacity: .5;
+      }
+    }
+    &_dprice &__item{
+      padding: 40px 85px 40px 65px;
+      @media only screen and (max-width:480px) {
+        padding: 75px 20px;
       }
     }
 
