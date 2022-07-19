@@ -274,11 +274,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let elMap = document.querySelector('#google-map');
     if (elMap) {
         let map;
-        const popupInfoMap = document.querySelector('.rd-google-map__locations').innerHTML;
+        const popupInfoMap = document.querySelectorAll('.rd-google-map__locations');
+        console.log(popupInfoMap);
         let InfoObj = [];
         let centerCords = {
-            lat:55.7518373,
-            lng:48.7522174
+            lat:55.7541938,
+            lng:41.9875404
         };
         const icons = {
             info: {
@@ -286,27 +287,39 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         };
         const markersOnMap = [
+            // moscow
             {   popupInfo: popupInfoMap,
                 LatLng: [
                     {
-                        lat:centerCords.lat,
-                        lng:centerCords.lng
+                        lat:55.810558,
+                        lng:37.524379
                     }
                 ],
                 type: 'info'
-            }
+            },
+            // kazan
+            {   popupInfo: popupInfoMap,
+                LatLng: [
+                    {
+                        lat:55.7518373,
+                        lng:48.7522174
+                    }
+                ],
+                type: 'info'
+            },
+
         ];
     
         function addMarkerInfo() {
-            markersOnMap.forEach(item => {
+            markersOnMap.forEach((item, index) => {
+                //console.log(item)
                 const marker = new google.maps.Marker({
                     position:item.LatLng[0],
                     icon: icons[item.type].icon,
                     map: map
                 });
-            
                 const infowindow = new google.maps.InfoWindow({
-                    content: item.popupInfo
+                    content: item.popupInfo[index].innerHTML
                 });
             
                 marker.addListener('click', function () {
@@ -314,9 +327,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
             })
         }
+        console.log(window.innerWidth);
+
         function initMap() {
+            let zoom = 6.3;
+            if(window.innerWidth < 800) zoom = 4;
             map = new google.maps.Map(elMap, {
-                zoom: 17,
+                zoom: zoom,
                 center: centerCords,
                 scrollwheel: !1,
             
