@@ -20,6 +20,17 @@
     fill: #fff;
   }
 }
+.bg-svg-clients {
+  width: 100%;
+  position: relative;
+  bottom: -10px;
+  //margin-top: 60px;
+  & svg {
+    width: 100%;
+    display: block;
+    fill: #eee;
+  }
+}
 .bg-svg-top-footer {
   width: 100%;
   position: relative;

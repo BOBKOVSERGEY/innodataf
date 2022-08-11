@@ -207,6 +207,26 @@
     padding: 120px 0;
     background-color: #F0F1F1;
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    & ul {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      & li {
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 25px;
+        z-index: 2;
+        &:before {
+          content: '';
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          background: #ED6F00;
+          position: absolute;
+          left: 0;
+          top: 10px;
+        }
+      }
+    }
 
   }
   &-uniqueness {

@@ -474,6 +474,36 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         }
     });
+    const clientsSlider = new Swiper('.clients__brand', {
+        slidesPerView : 4,
+        loop: true,
+        speed: 2000,
+        spaceBetween : 30,
+        //grabCursor: true,
+
+        autoplay: {
+            delay: 5000,
+        },
+        breakpoints: {
+
+
+            991:{
+                slidesPerView : 4
+            },
+
+            767:{
+                slidesPerView : 3
+
+            },
+
+            575:{
+                slidesPerView : 2
+            },
+            320: {
+                slidesPerView: 1,
+            },
+        }
+    });
     let swiperAnimation = new SwiperAnimation();
     const mainSlider = new Swiper('.slider-main', {
       
