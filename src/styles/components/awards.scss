@@ -3,6 +3,7 @@
 }
 .awards {
  // height: 500px;
+
   & .swiper-wrapper {
 
   }
@@ -127,4 +128,51 @@
 
 .brand-logo:hover .brand-logo__image {
   transform: scale(0.8, 0.8);
+}
+.awards-page {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  @media only screen and (max-width: 991.99px) {
+    align-items: center;
+  }
+  & .nav {
+    //flex-direction: column;
+    @media only screen and (max-width: 991.99px) {
+      flex-direction: row;
+    }
+  }
+  & .tab-content {
+    width: 100%;
+  }
+  & .nav-pills .nav-link {
+    position: relative;
+    color: white;
+    @media only screen and (max-width: 479.99px) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    @media only screen and (max-width: 991.99px) {
+      margin-bottom: unset;
+    }
+    & svg {
+      width: 60px;
+      height: 110px;
+      fill: $colorBlue;
+    }
+  }
+  &__year {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  & .nav-pills .nav-link.active, {
+    background: none;
+    & svg {
+      width: 60px;
+      height: 110px;
+      fill: $colorSecondary;
+    }
+  }
 }

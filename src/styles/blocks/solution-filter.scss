@@ -1,0 +1,98 @@
+.solution-filter {
+  margin: 20px 0  50px 0 ;
+  &__overlay {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    @media only screen and (max-width: 767.999px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    & h3 {
+      font-family: $fontBold;
+      font-size: 2.4rem;
+      color: #284b80;
+    }
+    &-show {
+      font-size: 2rem;
+      color: #284b80;
+      border-bottom: 1px dashed #284b80;
+      margin-left: 50px;
+      transition: all .3s ease-in-out;
+      cursor: pointer;
+      @media only screen and (max-width: 767.999px) {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+      &:hover {
+        color: $colorSecondary;
+        border-bottom: 1px dashed $colorSecondary;
+        transform: translate(2px, 2px);
+      }
+    }
+    &-reset {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      font-size: 2rem;
+      color: $colorPrimary;
+      transition: all .3s ease-in-out;
+      @media only screen and (max-width: 767.999px) {
+        margin-left: 0;
+      }
+      & i {
+        margin-right: 7px;
+        margin-left: 10px;
+        @media only screen and (max-width: 767.999px) {
+          margin-left: 0;
+        }
+        & svg {
+          transition: all .3s ease-in-out;
+          fill: $colorPrimary;
+          width: 24px;
+          height: 24px;
+        }
+      }
+      &:hover {
+        color: $colorSecondary;
+        & svg {
+          fill: $colorSecondary;
+        }
+      }
+    }
+  }
+  &__tag {
+    & a {
+      display: inline-block;
+      font-size: 2rem;
+      color: #284b80;
+      padding: 10px 30px;
+      border: 1px solid #07306d;
+      border-radius: 30px;
+      margin-right: 30px;
+      transition: all .4s ease-in-out;
+      margin-bottom: 15px;
+      @media only screen and (max-width: 767.999px) {
+        font-size: 1.6rem;
+        margin-right: 15px;
+      }
+      &:hover {
+        color: $colorSecondary;
+        border-color: $colorSecondary;
+        transform: translate(2px, 2px);
+        box-shadow: 0 0 30px rgba(#07306d, .3);
+      }
+      &.hide {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+        animation-delay: .2s;
+      }
+      &.active {
+        color: $colorSecondary;
+        border-color: $colorSecondary;
+        box-shadow: 0 0 30px rgba(#07306d, .3);
+      }
+    }
+  }
+}

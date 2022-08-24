@@ -888,7 +888,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
     } // if 'loading' supported
-    
+
+    /*filter tag solution*/
+    const allTagSolutions = document.querySelectorAll('.solution-filter__tag a');
+    const showAllTagBtn = document.querySelector('.solution-filter__overlay-show');
+    if(showAllTagBtn) {
+        showAllTagBtn.addEventListener( 'click', () => {
+            if(showAllTagBtn.textContent == 'Показать все') {
+                showAllTagBtn.textContent = 'Не показывать все'
+            } else  {
+                showAllTagBtn.textContent = 'Показать все'
+            }
+            if(allTagSolutions.length) {
+                allTagSolutions.forEach((item, index)=> {
+                    if(index > 9) item.classList.toggle('hide');
+                })
+
+            }
+        })
+    }
+    if(allTagSolutions.length) {
+        allTagSolutions.forEach((item, index)=> {
+            if(index > 9) item.classList.add('hide')
+        })
+
+    }
+    /*end filter tag solution*/
+
 });
 
 
